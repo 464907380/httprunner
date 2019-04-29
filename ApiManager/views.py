@@ -1134,5 +1134,3 @@ def run_test_dubbo_module(request):
                               status=status_ls,passNum=passNum,failNum=failNum)
         return render_to_response('report_dubbo.html', {'resultData':json.dumps(resultData)})
 
-    pq-dev,test
-
