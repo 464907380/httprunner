@@ -1135,3 +1135,4 @@ def run_test_dubbo_module(request):
         return render_to_response('report_dubbo.html', {'resultData':json.dumps(resultData)})
 
 
+ test
