@@ -1132,5 +1132,5 @@ def run_test_dubbo_module(request):
             print(passNum,failNum)
         resultData=DR.summary(obj_list=obj_list,Dubbo_request=request_ls,Dubbo_response=response_ls,spendTime=spendTime_ls,
                               status=status_ls,passNum=passNum,failNum=failNum)
-        return render_to_response('report_dubbo.html', {'resultData':json.dumps(resultData)
+        return render_to_response('report_dubbo.html', {'resultData':json.dumps(resultData)})
 
