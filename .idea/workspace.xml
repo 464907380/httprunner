@@ -1,29 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6cfe4f1-21c9-409f-a834-387eae7b5447" name="Default Changelist" comment="" />
+    <list default="true" id="f6cfe4f1-21c9-409f-a834-387eae7b5447" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/excel_test_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hrm-test-dev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hrm-test-dev.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/utils/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/utils/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/utils/operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/utils/operation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/utils/pagination.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/utils/pagination.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HttpRunnerManager/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HttpRunnerManager/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HttpRunnerManager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HttpRunnerManager/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/script.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/script.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/hrm_test_dev$jsdebug.dat" NAME="jsdebug Coverage Results" MODIFIED="1556264044120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/hrm_test_dev$Unittests_in_hrm_test_dev.coverage" NAME="Unittests in hrm-test-dev Coverage Results" MODIFIED="1556198966799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hrm_test_dev$views.coverage" NAME="views Coverage Results" MODIFIED="1556199120323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ApiManager" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="293" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HttpRunnerManager/settings.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApiManager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="133" column="43" lean-forward="true" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
+            <state relative-caret-position="171">
+              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApiManager/utils/operation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="369" column="23" selection-start-line="369" selection-start-column="23" selection-end-line="369" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/test_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="81" column="14" selection-start-line="81" selection-start-column="14" selection-end-line="81" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/excel_test_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="44" column="39" lean-forward="true" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+              <folding>
+                <element signature="e#3897#3920#0#HTML" expanded="true" />
+                <element signature="e#5818#5854#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="56" />
-    <option name="y" value="35" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>uploadfile</find>
+      <find>status</find>
+      <find>au</find>
+      <find>收索</find>
+      <find>搜索</find>
+      <find>index</find>
+      <find>#index</find>
+      <find>copy_list</find>
+      <find>add</find>
+      <find>add_case</find>
+      <find>upl</find>
+      <find>show</find>
+      <find>module</find>
+      <find>add_ca</find>
+      <find>TestCaseInfo</find>
+      <find>list</find>
+      <find>manage_info</find>
+      <find>pro_filter</find>
+      <find>upload</find>
+      <find>convert_eval</find>
+      <find>新增配置</find>
+      <find>新增</find>
+      <find>admin-biaogelist</find>
+      <find>&lt;td&gt;{{ foo.operating_steps }}&lt;/td&gt;</find>
+      <find>function my_delete() {</find>
+      <find>my_delete</find>
+      <find>bat</find>
+      <find>test_list</find>
+      <find>uploa</find>
+      <find>bat_delete</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ApiManager/from.py" />
+        <option value="$PROJECT_DIR$/HttpRunnerManager/settings.py" />
+        <option value="$PROJECT_DIR$/ApiManager/excel.py" />
+        <option value="$PROJECT_DIR$/ApiManager/admin.py" />
+        <option value="$PROJECT_DIR$/ApiManager/forms.py" />
+        <option value="$PROJECT_DIR$/templates/add_case_excel.html" />
+        <option value="$PROJECT_DIR$/templates/test_list_excel.html" />
+        <option value="$PROJECT_DIR$/HttpRunnerManager/urls.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/test_list.html" />
+        <option value="$PROJECT_DIR$/static/assets/js/commons.js" />
+        <option value="$PROJECT_DIR$/ApiManager/utils/pagination.py" />
+        <option value="$PROJECT_DIR$/ApiManager/models.py" />
+        <option value="$PROJECT_DIR$/ApiManager/utils/common.py" />
+        <option value="$PROJECT_DIR$/ApiManager/utils/operation.py" />
+        <option value="$PROJECT_DIR$/ApiManager/views.py" />
+        <option value="$PROJECT_DIR$/templates/excel_test_list.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="20" />
     <option name="width" value="1750" />
     <option name="height" value="980" />
   </component>
@@ -32,33 +177,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="hrm-test-dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrm-test-dev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrm-test-dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrm-test-dev" type="462c0819:PsiDirectoryNode" />
-              <item name="ApiManager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrm-test-dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrm-test-dev" type="462c0819:PsiDirectoryNode" />
-              <item name="HttpRunnerManager" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/add_case.html" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\pq\PycharmProjects\hrm-test-dev\templates" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -72,6 +204,84 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Django server.mysite">
+    <configuration name="jsdebug" type="JavascriptDebugType" activateToolWindowBeforeRun="false" uri="http://127.0.0.1:8000/api/test_list/1/">
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="hrm-test-dev" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ApiManager" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ApiManager/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mysite" type="Python.DjangoServer" factoryName="Django server">
+      <module name="hrm-test-dev" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="HttpRunnerManager.settings" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Programs\Python\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="127.0.0.1" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in hrm-test-dev" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="hrm-test-dev" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.mysite" />
+      <item itemvalue="JavaScript Debug.jsdebug" />
+      <item itemvalue="Python.views" />
+      <item itemvalue="Python tests.Unittests in hrm-test-dev" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python tests.Unittests in hrm-test-dev" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -82,36 +292,512 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555463576850</updated>
+      <workItem from="1556196283935" duration="4782000" />
+      <workItem from="1556201235305" duration="1265000" />
+      <workItem from="1556242115333" duration="24043000" />
+      <workItem from="1556292427807" duration="3045000" />
+      <workItem from="1556329807244" duration="22682000" />
+      <workItem from="1556414961004" duration="13873000" />
+      <workItem from="1556454269865" duration="7714000" />
+      <workItem from="1556501071923" duration="7659000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_in_hrm-test-dev - 2019.04.25 at 21h 29m 28s.xml">
+      <configuration name="Unittests in hrm-test-dev" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="85063000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="45" y="28" width="1400" height="784" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.22453083" />
+      <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.20576407" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49932975" weight="0.28895184" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067025" side_tool="true" weight="0.28895184" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286119" />
+      <window_info anchor="bottom" id="找到" order="11" />
+      <window_info anchor="bottom" id="运行" order="12" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="调试" order="15" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3297587" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.3297587" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" weight="0.3297587" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/static/assets/js/commons.js</url>
+          <line>95</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/static/assets/js/commons.js</url>
+          <line>94</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/static/assets/js/commons.js</url>
+          <line>2</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/templates/excel_test_list.html</url>
+          <line>234</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ApiManager/views.py</url>
+          <line>714</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ApiManager/views.py</url>
+          <line>390</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ApiManager/views.py</url>
+          <line>401</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ApiManager/views.py</url>
+          <line>185</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ApiManager/views.py</url>
+          <line>435</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ApiManager/utils/pagination.py</url>
+          <line>104</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ApiManager/views.py</url>
+          <line>203</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ApiManager/views.py</url>
+          <line>204</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ApiManager/templatetags/custom_tags.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ApiManager/templatetags/custom_tags.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/HttpRunnerManager/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_case_excel.html" />
+    <entry file="file://$PROJECT_DIR$/HttpRunnerManager/celery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53">
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="59" column="37" lean-forward="true" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/dubbo_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpRunnerManager/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HttpRunnerManager/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="133" column="43" lean-forward="true" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
+        <state relative-caret-position="113">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="301" column="4" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test_list_excel.html" />
+    <entry file="file://D:/Programs/Python/Python36/Lib/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="274" selection-start-line="274" selection-end-line="274" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/assets/js/amazeui.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1524" column="12" selection-start-line="1524" selection-start-column="12" selection-end-line="1524" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/site-packages/django/http/response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10051">
+          <caret line="547" column="8" selection-start-line="547" selection-start-column="8" selection-end-line="547" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/utils/testcase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpRunnerManager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/typing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="2095" column="8" selection-start-line="2095" selection-start-column="8" selection-end-line="2095" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/edit_case_excel.html" />
+    <entry file="file://$PROJECT_DIR$/templates/test_list_dubbo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7362" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="105" column="16" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/managers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-952">
+          <caret line="91" column="6" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="638" selection-start-line="638" selection-end-line="638" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="867" column="54" lean-forward="true" selection-start-line="867" selection-start-column="54" selection-end-line="867" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="263" column="8" selection-start-line="263" selection-start-column="8" selection-end-line="263" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/assets/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="1176" column="98" selection-start-line="1176" selection-start-column="98" selection-end-line="1176" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpRunnerManager/activator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/site-packages/django/utils/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/site-packages/django/core/handlers/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/site-packages/django/contrib/staticfiles/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/wsgiref/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/site-packages/django/core/servers/basehttp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="169" column="40" lean-forward="true" selection-start-line="169" selection-start-column="40" selection-end-line="169" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/utils/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8645">
+          <caret line="471" column="53" selection-start-line="471" selection-start-column="53" selection-end-line="471" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Python/Python36/Lib/site-packages/django/template/loader_tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5719">
+          <caret line="309" column="74" selection-start-line="309" selection-start-column="74" selection-end-line="309" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/utils/pagination.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1900">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/templatetags/custom_tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2698">
+          <caret line="145" column="45" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="893">
+            <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/migrations/0002_excelcase_result.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/standardSchemas/xhtml1-transitional.xsd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="88" column="42" lean-forward="true" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/assets/js/commons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/assets/css/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="799" column="29" selection-start-line="799" selection-start-column="29" selection-end-line="799" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/utils/operation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="369" column="23" selection-start-line="369" selection-start-column="23" selection-end-line="369" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/assets/css/amazeui.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="11498" column="5" selection-start-line="11498" selection-start-column="5" selection-end-line="11498" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="81" column="14" selection-start-line="81" selection-start-column="14" selection-end-line="81" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/excel_test_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="44" column="39" lean-forward="true" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+          <folding>
+            <element signature="e#3897#3920#0#HTML" expanded="true" />
+            <element signature="e#5818#5854#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

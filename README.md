@@ -38,14 +38,14 @@ CELERY_TASK_RESULT_EXPIRES = 7200 # celery任务执行结果的超时时间，
 CELERYD_CONCURRENCY = 1 if DEBUG else 10 # celery worker的并发数 也是命令行-c指定的数目 根据服务器配置实际更改 一般25即可
 CELERYD_MAX_TASKS_PER_CHILD = 100 # 每个worker执行了多少任务就会死掉，我建议数量可以大一些，比如200
 
-5、命令行窗口执行pip3 install -r requirements.txt 安装工程所依赖的库文件
+5、命令行窗口执行pip install -r requirements.txt 安装工程所依赖的库文件
 
 6、命令行窗口切换到HttpRunnerManager目录 生成数据库迁移脚本,并生成表结构
-python3 manage.py makemigrations ApiManager #生成数据迁移脚本 
-python3 manage.py migrate #应用到db生成数据表
+python manage.py makemigrations ApiManager #生成数据迁移脚本 
+python manage.py migrate #应用到db生成数据表
 
 7、启动服务
-python3 manage.py runserver 0.0.0.0:8000
+python manage.py runserver 0.0.0.0:8000
 
 8、启动worker, 如果选择同步执行并确保不会使用到定时任务，那么此步骤可忽略
 nohup python3 manage.py celery -A HttpRunnerManager worker --loglevel=info > logs/worker.log & #启动worker 
@@ -55,5 +55,5 @@ nohup python3 manage.py celery -A HttpRunnerManager worker --loglevel=info > log
 9、访问：http://localhost:5555/dashboard 即可查看任务列表和状态
 
 10、浏览器输入：
-    http://12.1.28.225:8000/api/register/  注册用户
-    http://12.1.28.225:8000/api/login/   使用注册用户登录平台
+    http://127.0.0.1:8000/api/register/  注册用户
+    http://127.0.0.1:8000/api/login/   使用注册用户登录平台

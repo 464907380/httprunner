@@ -1,3 +1,4 @@
+# coding: utf-8
 import json
 import logging
 import os
@@ -5,21 +6,25 @@ import shutil
 import sys
 
 import paramiko
+import xlrd
+from django.core.checks import messages
+from django.db import transaction
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse, StreamingHttpResponse
 from django.shortcuts import render_to_response
 from django.utils.safestring import mark_safe
 from djcelery.models import PeriodicTask
 from dwebsocket import accept_websocket
 
-from ApiManager import separator
+from ApiManager import separator, models
 from ApiManager.models import ProjectInfo, ModuleInfo, TestCaseInfo, UserInfo, EnvInfo, TestReports, DebugTalk, \
-    TestSuite
+    TestSuite, ExcelCase
 from ApiManager.tasks import main_hrun
 from ApiManager.utils.common import module_info_logic, project_info_logic, case_info_logic, config_info_logic, \
     set_filter_session, get_ajax_msg, register_info_logic, task_logic, load_modules, upload_file_logic, \
     init_filter_session, get_total_values, timestamp_to_datetime
 from ApiManager.utils.operation import env_data_logic, del_module_data, del_project_data, del_test_data, copy_test_data, \
-    del_report_data, add_suite_data, copy_suite_data, del_suite_data, edit_suite_data, add_test_reports,get_cases_by_module,get_casesNum_by_user
+    del_report_data, add_suite_data, copy_suite_data, del_suite_data, edit_suite_data, add_test_reports, \
+    get_cases_by_module, get_casesNum_by_user, del_excel_test_data
 from ApiManager.utils.pagination import get_pager_info,add_cases
 from ApiManager.utils.runner import run_by_batch, run_test_by_type
 from ApiManager.utils.task_opt import delete_task, change_task_status
@@ -169,7 +174,6 @@ def add_module(request):
         }
         return render_to_response('add_module.html', manage_info)
 
-
 @login_check
 def add_case(request):
     """
@@ -182,6 +186,26 @@ def add_case(request):
         testcase_info = json.loads(request.body.decode('utf-8'))
         msg = case_info_logic(**testcase_info)
         return HttpResponse(get_ajax_msg(msg, '/api/test_list/1/'))
+    elif request.method == 'GET':
+        manage_info = {
+            'account': account,
+            'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time')
+        }
+        return render_to_response('add_case.html', manage_info)
+
+
+@login_check
+def excel_add_case(request):
+    """
+    新增用例
+    :param request:
+    :return:
+    """
+    account = request.session["now_account"]
+    if request.is_ajax():
+        testcase_info = json.loads(request.body.decode('utf-8'))
+        msg = case_info_logic(**testcase_info)
+        return HttpResponse(get_ajax_msg(msg, '/api/excel_test_list/1/'))
     elif request.method == 'GET':
         manage_info = {
             'account': account,
@@ -387,6 +411,41 @@ def test_list(request, id):
             'project': ProjectInfo.objects.all().order_by('-update_time')
         }
         return render_to_response('test_list.html', manage_info)
+
+
+@login_check
+def excel_test_list(request, id):
+    """
+    用例列表
+    :param request:
+    :param id: str or int：当前页
+    :return:
+    """
+
+    account = request.session["now_account"]
+    if request.is_ajax():
+        test_info = json.loads(request.body.decode('utf-8'))
+
+        if test_info.get('mode') == 'del':
+            msg = del_test_data(test_info.pop('id'))
+        elif test_info.get('mode') == 'copy':
+            msg = copy_test_data(test_info.get('data').pop('index'), test_info.get('data').pop('name'))
+        return HttpResponse(get_ajax_msg(msg, 'ok'))
+
+    else:
+        filter_query = set_filter_session(request)
+        test_list = get_pager_info(
+            ExcelCase, filter_query, '/api/excel_test_list/', id)
+        manage_info = {
+            'account': account,
+            'test': test_list[1],
+            'page_list': test_list[0],
+            'info': filter_query,
+            'env': EnvInfo.objects.all().order_by('-create_time'),
+            'project': ProjectInfo.objects.all().order_by('-update_time')
+        }
+        return render_to_response('excel_test_list.html', manage_info)
+
 
 
 @login_check
@@ -625,21 +684,49 @@ def upload_file(request):
 
         os.mkdir(upload_path)
 
-        upload_obj = request.FILES.getlist('upload')
-        file_list = []
-        for i in range(len(upload_obj)):
-            temp_path = upload_path + upload_obj[i].name
-            file_list.append(temp_path)
+        excel_file = request.FILES['upload']
+        type_excel = excel_file.name.split('.')[1]
+        if 'xlsx' == type_excel or 'xls' == type_excel:
             try:
-                with open(temp_path, 'wb') as data:
-                    for line in upload_obj[i].chunks():
-                        data.write(line)
+                # 开始处理上传的excel表格
+                wb = xlrd.open_workbook(filename=None, file_contents=excel_file.read())
+                table = wb.sheet_by_index(0)
+                nrows = table.nrows  # 行数
+                for rowCount in range(1, nrows):
+                    ec = ExcelCase()
+                    ec.author = account
+                    ec.belong_module = ModuleInfo.objects.get_module_name(module_name, type=False)
+                    ec.belong_project = project_name
+                    # ec.sub_module_name = table.cell_value(rowCount, 1)
+                    ec.case_level = table.cell_value(rowCount, 2)
+                    ec.name = table.cell_value(rowCount, 4)
+                    ec.case_condition = table.cell_value(rowCount, 5)
+                    ec.operating_steps = table.cell_value(rowCount, 6)
+                    ec.expect = table.cell_value(rowCount, 7)
+                    ec.result = table.cell_value(rowCount, 9)
+                    ec.save()
             except IOError as e:
                 return JsonResponse({"status": e})
+            else:
+                wb.release_resources()
+                del wb
+            return JsonResponse({'status': '/api/excel_test_list/1/'})
+        else:
+            upload_obj = request.FILES.getlist('upload')
+            file_list = []
+            for i in range(len(upload_obj)):
+                temp_path = upload_path + upload_obj[i].name
+                file_list.append(temp_path)
+                try:
+                    with open(temp_path, 'wb') as data:
+                        for line in upload_obj[i].chunks():
+                            data.write(line)
+                except IOError as e:
+                    return JsonResponse({"status": e})
 
-        upload_file_logic(file_list, project_name, module_name, account)
+            upload_file_logic(file_list, project_name, module_name, account)
 
-        return JsonResponse({'status': '/api/test_list/1/'})
+            return JsonResponse({'status': '/api/test_list/1/'})
 
 
 @login_check
@@ -824,6 +911,17 @@ def bat_del(request):
         del_test_data(id)
     return HttpResponseRedirect('/api/test_list/1/')
 
+
+@login_check
+def excel_bat_del(request):
+    #批量删除excel用例
+    test_list=request.body.decode('utf-8').split('&')
+    for index in test_list:
+        id=index.split('=')[1]
+        del_excel_test_data(id)
+    return HttpResponseRedirect('/api/excel_test_list/1/')
+
+
 @login_check
 def add_case_dubbo(request):
     """
@@ -992,6 +1090,8 @@ def run_batch_test_dubbo(request):
         resultData=DR.summary(obj_list=obj_list,Dubbo_request=request_ls,Dubbo_response=response_ls,spendTime=spendTime_ls,
                               status=status_ls,passNum=passNum,failNum=failNum)
         return render_to_response('report_dubbo.html', {'resultData':json.dumps(resultData)})
+
+
 @login_check
 def run_test_dubbo_module(request):
 
@@ -1033,3 +1133,5 @@ def run_test_dubbo_module(request):
         resultData=DR.summary(obj_list=obj_list,Dubbo_request=request_ls,Dubbo_response=response_ls,spendTime=spendTime_ls,
                               status=status_ls,passNum=passNum,failNum=failNum)
         return render_to_response('report_dubbo.html', {'resultData':json.dumps(resultData)})
+
+

@@ -142,6 +142,8 @@ def get_pager_info(Model, filter_query, url, id, per_items=20):
 
         elif url == '/api/test_list/':
             obj = obj.filter(~Q(dubbo_is= 1),type__exact=1)
+        elif url == '/api/excel_test_list/':
+            obj = obj.filter(~Q(dubbo_is= 1),type__exact=1)
 
         else :
             obj = obj.filter(type__exact=2)

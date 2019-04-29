@@ -126,3 +126,28 @@ class TestSuite(BaseTable):
     belong_project = models.ForeignKey(ProjectInfo, on_delete=models.CASCADE)
     suite_name = models.CharField(max_length=100, null=False)
     include = models.TextField(null=False)
+
+
+class ExcelCase(BaseTable):
+    type = models.IntegerField('test/config', default=1)
+    name = models.CharField('用例/配置名称', max_length=50, null=False)
+    belong_project = models.CharField('所属项目', max_length=50, null=False)
+    belong_module = models.ForeignKey(ModuleInfo, on_delete=models.CASCADE)
+    include = models.CharField('前置config/test', max_length=1024, null=True)
+    author = models.CharField('编写人员', max_length=200, null=False)
+    request = models.TextField('请求信息', null=True)
+    remark = models.CharField('备注', max_length=100, null=True)
+    dubbo_is = models.IntegerField('1为dubbo用例', null=True)
+    objects = TestCaseInfoManager()
+
+    assessment = models.CharField('评审结果', max_length=100, null=True)
+    result = models.CharField('执行结果', max_length=100, null=True)
+    case_level = models.TextField('用例级别',max_length=1024)
+    case_condition = models.TextField('前提条件')
+    operating_steps = models.TextField('操作步骤')
+    expect = models.TextField('预期结果')
+
+    # 定义表名称
+    class Meta:
+        verbose_name = "Excel用例信息"
+        db_table = "ExcelCaseInfo"

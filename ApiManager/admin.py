@@ -3,6 +3,9 @@ from django.contrib import admin
 from ApiManager.models import UserInfo, ProjectInfo, ModuleInfo, TestCaseInfo, EnvInfo
 
 
+
+
+
 @admin.register(UserInfo)
 class UserInfoAdmin(admin.ModelAdmin):
     list_display = ('id', 'username', 'password', 'email', 'status', 'create_time', 'update_time')
@@ -67,3 +70,4 @@ class EnvInfoAdmin(admin.ModelAdmin):
 
 admin.site.site_header = 'HttpRunnerManager运维管理系统'
 admin.site.site_title = 'HttpRunnerManager'
+

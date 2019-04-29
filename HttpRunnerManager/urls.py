@@ -16,7 +16,6 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.views.generic import RedirectView
-
 from HttpRunnerManager.activator import process
 
 urlpatterns = [
@@ -25,5 +24,7 @@ urlpatterns = [
     url('^(?P<app>(\w+))/(?P<function>(\w+))/$', process),
     #(?P<app>(\w+))传参路由，相当于字典{app：(\w+)} \w+匹配数字字母下划线
     url('^(?P<app>(\w+))/(?P<function>(\w+))/(?P<id>(\w+))/$', process),
-
+    
 ]
+
+

@@ -2,13 +2,13 @@ import datetime
 import logging
 import os
 
+import xlrd
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import DataError
 
 from ApiManager import separator
 from ApiManager.models import ProjectInfo, ModuleInfo, TestCaseInfo, UserInfo, EnvInfo, TestReports, DebugTalk, \
-    TestSuite
-
+    TestSuite, ExcelCase
 
 logger = logging.getLogger('HttpRunnerManager')
 
@@ -353,6 +353,20 @@ def del_test_data(id):
     return 'ok'
 
 
+def del_excel_test_data(id):
+    """
+    根据用例或配置索引删除数据
+    :param id: str or int: test or config index
+    :return: ok or tips
+    """
+    try:
+        ExcelCase.objects.get(id=id).delete()
+    except ObjectDoesNotExist:
+        return '删除异常，请重试'
+    logging.info('用例/配置已删除')
+    return 'ok'
+
+
 def del_suite_data(id):
     """
     根据Suite索引删除数据
@@ -459,10 +473,12 @@ def add_test_reports(runner, report_name=None):
     TestReports.objects.create(**test_reports)
     return report_path
 
+
 def get_cases_by_module(module_id,type=1):
     case_opt = TestCaseInfo.objects
     ids=case_opt.get_case_id_InModule(module_id,type)
     return ids
+
 
 def get_casesNum_by_user(user_list,type=1):
     dictUserCase={}
@@ -470,3 +486,4 @@ def get_casesNum_by_user(user_list,type=1):
         count=TestCaseInfo.objects.filter(type=type).filter(author=index[0]).count()
         dictUserCase[index[0]]=count
     return dictUserCase
+
