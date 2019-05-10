@@ -1,7 +1,7 @@
 from django.db import models
 
 from ApiManager.managers import UserTypeManager, UserInfoManager, ProjectInfoManager, ModuleInfoManager, \
-    TestCaseInfoManager, EnvInfoManager
+    TestCaseInfoManager, EnvInfoManager, ExcelCaseInfoManager
 
 
 # Create your models here.
@@ -138,7 +138,7 @@ class ExcelCase(BaseTable):
     request = models.TextField('请求信息', null=True)
     remark = models.CharField('备注', max_length=100, null=True)
     dubbo_is = models.IntegerField('1为dubbo用例', null=True)
-    objects = TestCaseInfoManager()
+    objects = ExcelCaseInfoManager()
 
     assessment = models.CharField('评审结果', max_length=100, null=True)
     result = models.CharField('执行结果', max_length=100, null=True)

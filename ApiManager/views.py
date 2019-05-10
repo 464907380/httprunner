@@ -692,19 +692,27 @@ def upload_file(request):
                 wb = xlrd.open_workbook(filename=None, file_contents=excel_file.read())
                 table = wb.sheet_by_index(0)
                 nrows = table.nrows  # 行数
+                oec = ExcelCase.objects
                 for rowCount in range(1, nrows):
                     ec = ExcelCase()
                     ec.author = account
-                    ec.belong_module = ModuleInfo.objects.get_module_name(module_name, type=False)
-                    ec.belong_project = project_name
-                    # ec.sub_module_name = table.cell_value(rowCount, 1)
-                    ec.case_level = table.cell_value(rowCount, 2)
-                    ec.name = table.cell_value(rowCount, 4)
-                    ec.case_condition = table.cell_value(rowCount, 5)
-                    ec.operating_steps = table.cell_value(rowCount, 6)
-                    ec.expect = table.cell_value(rowCount, 7)
-                    ec.result = table.cell_value(rowCount, 9)
-                    ec.save()
+                    name = table.cell_value(rowCount, 4)
+                    count = oec.get_case_name(name,module_name,project_name)
+                    if count < 1:
+                        ec.belong_module = ModuleInfo.objects.get_module_name(module_name, type=False)
+                        ec.belong_project = project_name
+                        # ec.sub_module_name = table.cell_value(rowCount, 1)
+                        ec.case_level = table.cell_value(rowCount, 2)
+                        ec.name = table.cell_value(rowCount, 4)
+                        ec.case_condition = table.cell_value(rowCount, 5)
+                        ec.operating_steps = table.cell_value(rowCount, 6)
+                        ec.expect = table.cell_value(rowCount, 7)
+                        ec.result = table.cell_value(rowCount, 9)
+                        ec.save()
+                        logger.info('{name}---用例添加成功'.format(name=name))
+                    else:
+                        logger.info('{name}---用例未导入因为已存在'.format(name=name))
+
             except IOError as e:
                 return JsonResponse({"status": e})
             else:

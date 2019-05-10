@@ -377,3 +377,391 @@ ValueError: Cannot assign "'1'": "ExcelCase.belong_module" must be a "ModuleInfo
 2019-04-29 09:50:42,828 [HttpRunnerManager:110] [operation:add_module_data] [INFO]- 模块添加成功：{'module_name': '还款', 'test_user': 'pq', 'simple_desc': '', 'other_desc': '', 'belong_project': <ProjectInfo: ProjectInfo object (1)>}
 2019-04-29 09:51:33,128 [HttpRunnerManager:62] [operation:add_project_data] [INFO]- 项目添加成功：{'project_name': 'cas', 'responsible_name': 'qwe', 'test_user': 'rty', 'dev_user': 'asd', 'publish_app': 'cas2', 'simple_desc': '', 'other_desc': ''}
 2019-04-29 09:53:30,910 [HttpRunnerManager:110] [operation:add_module_data] [INFO]- 模块添加成功：{'module_name': '还款', 'test_user': 'rty', 'simple_desc': '', 'other_desc': '', 'belong_project': <ProjectInfo: ProjectInfo object (2)>}
+2019-05-02 01:02:35,914 [django.request:228] [log:log_response] [WARNING]- Not Found: /
+2019-05-02 01:02:41,991 [django.request:228] [log:log_response] [WARNING]- Not Found: /login
+2019-05-02 01:02:56,874 [HttpRunnerManager:61] [views:login] [INFO]- pengqiang 登录成功
+2019-05-07 21:44:47,907 [django.request:228] [log:log_response] [WARNING]- Not Found: /
+2019-05-07 21:44:47,938 [django.request:228] [log:log_response] [WARNING]- Not Found: /
+2019-05-07 21:45:05,028 [HttpRunnerManager:61] [views:login] [INFO]- pengqiang 登录成功
+2019-05-07 22:00:22,758 [HttpRunnerManager:96] [views:log_out] [INFO]- pengqiang退出
+2019-05-07 22:00:29,283 [HttpRunnerManager:61] [views:login] [INFO]- pengqiang 登录成功
+2019-05-09 20:34:30,344 [django.request:228] [log:log_response] [WARNING]- Not Found: /
+2019-05-09 20:34:31,007 [django.request:228] [log:log_response] [WARNING]- Not Found: /
+2019-05-09 20:34:50,904 [HttpRunnerManager:61] [views:login] [INFO]- pengqiang 登录成功
+2019-05-09 20:35:27,988 [django.request:228] [log:log_response] [ERROR]- Internal Server Error: /api/upload_file/
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 45, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 698, in upload_file
+    if (ec.filter(belong_module__id=module_name).filter(name__exact=table.cell_value(rowCount, 4)).filter(
+AttributeError: 'ExcelCase' object has no attribute 'filter'
+2019-05-09 20:39:57,604 [django.request:228] [log:log_response] [ERROR]- Internal Server Error: /api/upload_file/
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 45, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 698, in upload_file
+    if (ec.filter(belong_module__id=module_name).filter(name__exact=table.cell_value(rowCount, 4)).filter(
+AttributeError: 'ExcelCase' object has no attribute 'filter'
+2019-05-09 20:43:33,099 [django.request:228] [log:log_response] [ERROR]- Internal Server Error: /api/upload_file/
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 45, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 698, in upload_file
+    name = table.cell_value(rowCount, 4)
+AttributeError: 'ExcelCase' object has no attribute 'filter'
+2019-05-09 20:51:01,407 [django.request:228] [log:log_response] [ERROR]- Internal Server Error: /api/upload_file/
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 45, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 699, in upload_file
+    if (ec.filter(belong_module__id=module_name).filter(name__exact=name).filter(belong_project__exact=project_name).count()) < 1:
+AttributeError: 'ExcelCase' object has no attribute 'filter'
+2019-05-09 21:01:31,159 [django.request:228] [log:log_response] [ERROR]- Internal Server Error: /api/upload_file/
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 45, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 699, in upload_file
+    count = ec.filter(belong_module__id=module_name).filter(name__exact=name).filter(belong_project__exact=project_name).count()
+AttributeError: 'ExcelCase' object has no attribute 'filter'
+2019-05-09 21:05:01,651 [django.request:228] [log:log_response] [ERROR]- Internal Server Error: /api/upload_file/
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 45, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 699, in upload_file
+    name = table.cell_value(rowCount, 4)
+AttributeError: 'ExcelCase' object has no attribute 'filter'
+2019-05-09 21:13:07,618 [django.request:228] [log:log_response] [ERROR]- Internal Server Error: /api/upload_file/
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 45, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 699, in upload_file
+    name = table.cell_value(rowCount, 4)
+AttributeError: 'ExcelCase' object has no attribute 'filter'
+2019-05-09 21:15:16,301 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合额度调用redis用例添加失败
+2019-05-09 21:15:49,122 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-人工审批用例添加失败
+2019-05-09 21:15:49,135 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-自动审批用例添加失败
+2019-05-09 21:15:49,150 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-人工审批用例添加失败
+2019-05-09 21:15:49,163 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-自动审批用例添加失败
+2019-05-09 21:15:49,177 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-人工审批用例添加失败
+2019-05-09 21:15:49,190 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-自动审批用例添加失败
+2019-05-09 21:15:49,204 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-100026接口提交用例添加失败
+2019-05-09 21:15:49,218 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-100026接口提交用例添加失败
+2019-05-09 21:15:49,231 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-100026接口提交用例添加失败
+2019-05-09 21:15:49,245 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合校验--查询结果为空用例添加失败
+2019-05-09 21:15:49,271 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为空用例添加失败
+2019-05-09 21:15:49,297 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为关闭用例添加失败
+2019-05-09 21:15:49,324 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为开，额度为空用例添加失败
+2019-05-09 21:15:49,353 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合额度调用redis--满额后调用加载方法用例添加失败
+2019-05-09 21:15:49,381 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--已放款用例添加失败
+2019-05-09 21:15:49,405 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--已放款用例添加失败
+2019-05-09 21:15:49,426 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--在途用例添加失败
+2019-05-09 21:15:49,441 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--在途用例添加失败
+2019-05-09 21:15:49,457 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--待放款用例添加失败
+2019-05-09 21:15:49,470 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--待放款用例添加失败
+2019-05-09 21:15:49,484 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--预占用例添加失败
+2019-05-09 21:15:49,496 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--中间表用例添加失败
+2019-05-09 21:15:49,509 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：规则首次调用redis时，调用加载模块用例添加失败
+2019-05-09 21:15:49,525 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：26接口提交一笔已预占成功的贷款申请，调用加载模块，重新设置规则用例添加失败
+2019-05-09 21:15:49,547 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确用例添加失败
+2019-05-09 21:15:49,571 [HttpRunnerManager:704] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确用例添加失败
+2019-05-09 21:17:33,178 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis用例未导入因为已存在
+2019-05-09 21:17:33,198 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-人工审批用例未导入因为已存在
+2019-05-09 21:17:33,216 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-自动审批用例未导入因为已存在
+2019-05-09 21:17:33,234 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-人工审批用例未导入因为已存在
+2019-05-09 21:17:33,252 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-自动审批用例未导入因为已存在
+2019-05-09 21:17:33,270 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-人工审批用例未导入因为已存在
+2019-05-09 21:17:33,288 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-自动审批用例未导入因为已存在
+2019-05-09 21:17:33,309 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-100026接口提交用例未导入因为已存在
+2019-05-09 21:17:33,325 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-100026接口提交用例未导入因为已存在
+2019-05-09 21:17:33,342 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-100026接口提交用例未导入因为已存在
+2019-05-09 21:17:33,359 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--查询结果为空用例未导入因为已存在
+2019-05-09 21:17:33,377 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为空用例未导入因为已存在
+2019-05-09 21:17:33,395 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为关闭用例未导入因为已存在
+2019-05-09 21:17:33,419 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为开，额度为空用例未导入因为已存在
+2019-05-09 21:17:33,435 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis--满额后调用加载方法用例未导入因为已存在
+2019-05-09 21:17:33,447 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--已放款用例未导入因为已存在
+2019-05-09 21:17:33,457 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--已放款用例未导入因为已存在
+2019-05-09 21:17:33,468 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--在途用例未导入因为已存在
+2019-05-09 21:17:33,478 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--在途用例未导入因为已存在
+2019-05-09 21:17:33,488 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--待放款用例未导入因为已存在
+2019-05-09 21:17:33,499 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--待放款用例未导入因为已存在
+2019-05-09 21:17:33,509 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--预占用例未导入因为已存在
+2019-05-09 21:17:33,520 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--中间表用例未导入因为已存在
+2019-05-09 21:17:33,530 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：规则首次调用redis时，调用加载模块用例未导入因为已存在
+2019-05-09 21:17:33,541 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：26接口提交一笔已预占成功的贷款申请，调用加载模块，重新设置规则用例未导入因为已存在
+2019-05-09 21:17:33,552 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确用例未导入因为已存在
+2019-05-09 21:17:33,564 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确用例未导入因为已存在
+2019-05-09 21:19:34,088 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis---用例未导入因为已存在
+2019-05-09 21:19:34,095 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-人工审批---用例未导入因为已存在
+2019-05-09 21:19:34,103 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-自动审批---用例未导入因为已存在
+2019-05-09 21:19:34,111 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-人工审批---用例未导入因为已存在
+2019-05-09 21:19:34,117 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-自动审批---用例未导入因为已存在
+2019-05-09 21:19:34,124 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-人工审批---用例未导入因为已存在
+2019-05-09 21:19:34,131 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-自动审批---用例未导入因为已存在
+2019-05-09 21:19:34,138 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-100026接口提交---用例未导入因为已存在
+2019-05-09 21:19:34,146 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-100026接口提交---用例未导入因为已存在
+2019-05-09 21:19:34,153 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-100026接口提交---用例未导入因为已存在
+2019-05-09 21:19:34,161 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--查询结果为空---用例未导入因为已存在
+2019-05-09 21:19:34,168 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为空---用例未导入因为已存在
+2019-05-09 21:19:34,175 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为关闭---用例未导入因为已存在
+2019-05-09 21:19:34,184 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为开，额度为空---用例未导入因为已存在
+2019-05-09 21:19:34,192 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis--满额后调用加载方法---用例未导入因为已存在
+2019-05-09 21:19:34,199 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--已放款---用例未导入因为已存在
+2019-05-09 21:19:34,207 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--已放款---用例未导入因为已存在
+2019-05-09 21:19:34,215 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--在途---用例未导入因为已存在
+2019-05-09 21:19:34,221 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--在途---用例未导入因为已存在
+2019-05-09 21:19:34,227 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--待放款---用例未导入因为已存在
+2019-05-09 21:19:34,235 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--待放款---用例未导入因为已存在
+2019-05-09 21:19:34,243 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--预占---用例未导入因为已存在
+2019-05-09 21:19:34,251 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--中间表---用例未导入因为已存在
+2019-05-09 21:19:34,258 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：规则首次调用redis时，调用加载模块---用例未导入因为已存在
+2019-05-09 21:19:34,267 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：26接口提交一笔已预占成功的贷款申请，调用加载模块，重新设置规则---用例未导入因为已存在
+2019-05-09 21:19:34,275 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在
+2019-05-09 21:19:34,282 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在
+2019-05-09 21:20:15,619 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis---用例添加成功
+2019-05-09 21:20:15,647 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-人工审批---用例添加成功
+2019-05-09 21:20:15,711 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-自动审批---用例添加成功
+2019-05-09 21:20:15,740 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-人工审批---用例添加成功
+2019-05-09 21:20:15,811 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-自动审批---用例添加成功
+2019-05-09 21:20:15,921 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-人工审批---用例添加成功
+2019-05-09 21:20:16,021 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-自动审批---用例添加成功
+2019-05-09 21:20:16,055 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-100026接口提交---用例添加成功
+2019-05-09 21:20:16,118 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-100026接口提交---用例添加成功
+2019-05-09 21:20:16,144 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-100026接口提交---用例添加成功
+2019-05-09 21:20:16,221 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--查询结果为空---用例添加成功
+2019-05-09 21:20:16,277 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为空---用例添加成功
+2019-05-09 21:20:16,322 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为关闭---用例添加成功
+2019-05-09 21:20:16,377 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为开，额度为空---用例添加成功
+2019-05-09 21:20:16,435 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis--满额后调用加载方法---用例添加成功
+2019-05-09 21:20:16,496 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--已放款---用例添加成功
+2019-05-09 21:20:16,556 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--已放款---用例添加成功
+2019-05-09 21:20:16,609 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--在途---用例添加成功
+2019-05-09 21:20:16,671 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--在途---用例添加成功
+2019-05-09 21:20:16,708 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--待放款---用例添加成功
+2019-05-09 21:20:16,753 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--待放款---用例添加成功
+2019-05-09 21:20:16,785 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--预占---用例添加成功
+2019-05-09 21:20:16,814 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--中间表---用例添加成功
+2019-05-09 21:20:16,844 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：规则首次调用redis时，调用加载模块---用例添加成功
+2019-05-09 21:20:16,873 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：26接口提交一笔已预占成功的贷款申请，调用加载模块，重新设置规则---用例添加成功
+2019-05-09 21:20:16,905 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例添加成功
+2019-05-09 21:20:16,913 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在
+2019-05-09 21:23:14,798 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis---用例添加成功
+2019-05-09 21:23:14,825 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-人工审批---用例添加成功
+2019-05-09 21:23:14,855 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-自动审批---用例添加成功
+2019-05-09 21:23:14,884 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-人工审批---用例添加成功
+2019-05-09 21:23:14,908 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-自动审批---用例添加成功
+2019-05-09 21:23:14,940 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-人工审批---用例添加成功
+2019-05-09 21:23:14,973 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-自动审批---用例添加成功
+2019-05-09 21:23:15,002 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-100026接口提交---用例添加成功
+2019-05-09 21:23:15,032 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-100026接口提交---用例添加成功
+2019-05-09 21:23:15,061 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-100026接口提交---用例添加成功
+2019-05-09 21:23:15,090 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--查询结果为空---用例添加成功
+2019-05-09 21:23:15,117 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为空---用例添加成功
+2019-05-09 21:23:15,142 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为关闭---用例添加成功
+2019-05-09 21:23:15,171 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为开，额度为空---用例添加成功
+2019-05-09 21:23:15,200 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis--满额后调用加载方法---用例添加成功
+2019-05-09 21:23:15,231 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--已放款---用例添加成功
+2019-05-09 21:23:15,264 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--已放款---用例添加成功
+2019-05-09 21:23:15,292 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--在途---用例添加成功
+2019-05-09 21:23:15,326 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--在途---用例添加成功
+2019-05-09 21:23:15,355 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--待放款---用例添加成功
+2019-05-09 21:23:15,388 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--待放款---用例添加成功
+2019-05-09 21:23:15,412 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--预占---用例添加成功
+2019-05-09 21:23:15,444 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--中间表---用例添加成功
+2019-05-09 21:23:15,472 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：规则首次调用redis时，调用加载模块---用例添加成功
+2019-05-09 21:23:15,507 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：26接口提交一笔已预占成功的贷款申请，调用加载模块，重新设置规则---用例添加成功
+2019-05-09 21:23:15,517 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在
+2019-05-09 21:23:15,525 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在
+2019-05-09 21:26:13,062 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis---用例添加成功
+2019-05-09 21:26:35,729 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-人工审批---用例添加成功
+2019-05-09 21:28:14,357 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis---用例添加成功
+2019-05-09 21:28:14,369 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-人工审批---用例未导入因为已存在
+2019-05-09 21:28:14,398 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-自动审批---用例添加成功
+2019-05-09 21:28:14,425 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-人工审批---用例添加成功
+2019-05-09 21:28:14,453 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-自动审批---用例添加成功
+2019-05-09 21:28:14,483 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-人工审批---用例添加成功
+2019-05-09 21:28:14,510 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-自动审批---用例添加成功
+2019-05-09 21:28:14,538 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-100026接口提交---用例添加成功
+2019-05-09 21:28:14,569 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-100026接口提交---用例添加成功
+2019-05-09 21:28:14,601 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-100026接口提交---用例添加成功
+2019-05-09 21:28:14,660 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--查询结果为空---用例添加成功
+2019-05-09 21:28:14,723 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为空---用例添加成功
+2019-05-09 21:28:14,785 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为关闭---用例添加成功
+2019-05-09 21:28:14,855 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为开，额度为空---用例添加成功
+2019-05-09 21:28:14,956 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis--满额后调用加载方法---用例添加成功
+2019-05-09 21:28:14,993 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--已放款---用例添加成功
+2019-05-09 21:28:15,057 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--已放款---用例添加成功
+2019-05-09 21:28:15,156 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--在途---用例添加成功
+2019-05-09 21:28:15,194 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--在途---用例添加成功
+2019-05-09 21:28:15,253 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--待放款---用例添加成功
+2019-05-09 21:28:15,355 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--待放款---用例添加成功
+2019-05-09 21:28:15,404 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--预占---用例添加成功
+2019-05-09 21:28:15,459 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--中间表---用例添加成功
+2019-05-09 21:28:15,488 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：规则首次调用redis时，调用加载模块---用例添加成功
+2019-05-09 21:28:15,506 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：26接口提交一笔已预占成功的贷款申请，调用加载模块，重新设置规则---用例未导入因为已存在
+2019-05-09 21:28:15,539 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在
+2019-05-09 21:28:15,560 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在
+2019-05-09 21:29:12,321 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis---用例未导入因为已存在
+2019-05-09 21:29:12,330 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-人工审批---用例未导入因为已存在
+2019-05-09 21:29:12,339 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-自动审批---用例未导入因为已存在
+2019-05-09 21:29:12,346 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-人工审批---用例未导入因为已存在
+2019-05-09 21:29:12,355 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-自动审批---用例未导入因为已存在
+2019-05-09 21:29:12,366 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-人工审批---用例未导入因为已存在
+2019-05-09 21:29:12,375 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-自动审批---用例未导入因为已存在
+2019-05-09 21:29:12,387 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-100026接口提交---用例未导入因为已存在
+2019-05-09 21:29:12,395 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-100026接口提交---用例未导入因为已存在
+2019-05-09 21:29:12,403 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-100026接口提交---用例未导入因为已存在
+2019-05-09 21:29:12,410 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--查询结果为空---用例未导入因为已存在
+2019-05-09 21:29:12,422 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为空---用例未导入因为已存在
+2019-05-09 21:29:12,430 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为关闭---用例未导入因为已存在
+2019-05-09 21:29:12,439 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为开，额度为空---用例未导入因为已存在
+2019-05-09 21:29:12,449 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis--满额后调用加载方法---用例未导入因为已存在
+2019-05-09 21:29:12,459 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--已放款---用例未导入因为已存在
+2019-05-09 21:29:12,468 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--已放款---用例未导入因为已存在
+2019-05-09 21:29:12,476 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--在途---用例未导入因为已存在
+2019-05-09 21:29:12,487 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--在途---用例未导入因为已存在
+2019-05-09 21:29:12,495 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--待放款---用例未导入因为已存在
+2019-05-09 21:29:12,503 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--待放款---用例未导入因为已存在
+2019-05-09 21:29:12,513 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--预占---用例未导入因为已存在
+2019-05-09 21:29:12,521 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--中间表---用例未导入因为已存在
+2019-05-09 21:29:12,527 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：规则首次调用redis时，调用加载模块---用例未导入因为已存在
+2019-05-09 21:29:12,540 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：26接口提交一笔已预占成功的贷款申请，调用加载模块，重新设置规则---用例未导入因为已存在
+2019-05-09 21:29:12,551 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在
+2019-05-09 21:29:12,560 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在
+2019-05-09 21:29:48,319 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis---用例添加成功
+2019-05-09 21:29:48,349 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-人工审批---用例添加成功
+2019-05-09 21:29:48,398 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-自动审批---用例添加成功
+2019-05-09 21:29:48,444 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-人工审批---用例添加成功
+2019-05-09 21:29:48,489 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-自动审批---用例添加成功
+2019-05-09 21:29:48,537 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-人工审批---用例添加成功
+2019-05-09 21:29:48,583 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-自动审批---用例添加成功
+2019-05-09 21:29:48,629 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-100026接口提交---用例添加成功
+2019-05-09 21:29:48,677 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-100026接口提交---用例添加成功
+2019-05-09 21:29:48,722 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-100026接口提交---用例添加成功
+2019-05-09 21:29:48,767 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--查询结果为空---用例添加成功
+2019-05-09 21:29:48,814 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为空---用例添加成功
+2019-05-09 21:29:48,861 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为关闭---用例添加成功
+2019-05-09 21:29:48,906 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为开，额度为空---用例添加成功
+2019-05-09 21:29:48,957 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis--满额后调用加载方法---用例添加成功
+2019-05-09 21:29:49,012 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--已放款---用例添加成功
+2019-05-09 21:29:49,056 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--已放款---用例添加成功
+2019-05-09 21:29:49,105 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--在途---用例添加成功
+2019-05-09 21:29:49,150 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--在途---用例添加成功
+2019-05-09 21:29:49,201 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--待放款---用例添加成功
+2019-05-09 21:29:49,250 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--待放款---用例添加成功
+2019-05-09 21:29:49,305 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--预占---用例添加成功
+2019-05-09 21:29:49,353 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--中间表---用例添加成功
+2019-05-09 21:29:49,395 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：规则首次调用redis时，调用加载模块---用例添加成功
+2019-05-09 21:29:49,426 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：26接口提交一笔已预占成功的贷款申请，调用加载模块，重新设置规则---用例添加成功
+2019-05-09 21:29:49,457 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例添加成功
+2019-05-09 21:29:49,469 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在
+2019-05-09 21:33:41,055 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis---用例未导入因为已存在
+2019-05-09 21:33:41,061 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-人工审批---用例未导入因为已存在
+2019-05-09 21:33:41,066 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-自动审批---用例未导入因为已存在
+2019-05-09 21:33:41,072 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-人工审批---用例未导入因为已存在
+2019-05-09 21:33:41,076 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-自动审批---用例未导入因为已存在
+2019-05-09 21:33:41,084 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-人工审批---用例未导入因为已存在
+2019-05-09 21:33:41,087 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-自动审批---用例未导入因为已存在
+2019-05-09 21:33:41,095 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-100026接口提交---用例未导入因为已存在
+2019-05-09 21:33:41,104 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-100026接口提交---用例未导入因为已存在
+2019-05-09 21:33:41,113 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-100026接口提交---用例未导入因为已存在
+2019-05-09 21:33:41,119 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--查询结果为空---用例未导入因为已存在
+2019-05-09 21:33:41,128 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为空---用例未导入因为已存在
+2019-05-09 21:33:41,135 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为关闭---用例未导入因为已存在
+2019-05-09 21:33:41,138 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为开，额度为空---用例未导入因为已存在
+2019-05-09 21:33:41,146 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合额度调用redis--满额后调用加载方法---用例未导入因为已存在
+2019-05-09 21:33:41,148 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--已放款---用例未导入因为已存在
+2019-05-09 21:33:41,158 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--已放款---用例未导入因为已存在
+2019-05-09 21:33:41,164 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--在途---用例未导入因为已存在
+2019-05-09 21:33:41,169 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--在途---用例未导入因为已存在
+2019-05-09 21:33:41,177 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--待放款---用例未导入因为已存在
+2019-05-09 21:33:41,191 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--待放款---用例未导入因为已存在
+2019-05-09 21:33:41,201 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--预占---用例未导入因为已存在
+2019-05-09 21:33:41,210 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--中间表---用例未导入因为已存在
+2019-05-09 21:33:41,219 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：规则首次调用redis时，调用加载模块---用例未导入因为已存在
+2019-05-09 21:33:41,227 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：26接口提交一笔已预占成功的贷款申请，调用加载模块，重新设置规则---用例未导入因为已存在
+2019-05-09 21:33:41,233 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在
+2019-05-09 21:33:41,244 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在
+2019-05-09 21:33:57,379 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis---用例添加成功
+2019-05-09 21:33:57,420 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-人工审批---用例添加成功
+2019-05-09 21:33:57,479 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-自动审批---用例添加成功
+2019-05-09 21:33:57,526 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-人工审批---用例添加成功
+2019-05-09 21:33:57,575 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-自动审批---用例添加成功
+2019-05-09 21:33:57,645 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-人工审批---用例添加成功
+2019-05-09 21:33:57,674 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-自动审批---用例添加成功
+2019-05-09 21:33:57,746 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验通过-100026接口提交---用例添加成功
+2019-05-09 21:33:57,793 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验不通过-100026接口提交---用例添加成功
+2019-05-09 21:33:57,848 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis模块校验异常-100026接口提交---用例添加成功
+2019-05-09 21:33:57,945 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--查询结果为空---用例添加成功
+2019-05-09 21:33:57,985 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为空---用例添加成功
+2019-05-09 21:33:58,050 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为关闭---用例添加成功
+2019-05-09 21:33:58,149 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合校验--门店额度开关为开，额度为空---用例添加成功
+2019-05-09 21:33:58,196 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合额度调用redis--满额后调用加载方法---用例添加成功
+2019-05-09 21:33:58,256 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--已放款---用例添加成功
+2019-05-09 21:33:58,354 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--已放款---用例添加成功
+2019-05-09 21:33:58,377 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--在途---用例添加成功
+2019-05-09 21:33:58,418 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--在途---用例添加成功
+2019-05-09 21:33:58,451 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--待放款---用例添加成功
+2019-05-09 21:33:58,498 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，已满额，调用加载方法--待放款---用例添加成功
+2019-05-09 21:33:58,530 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--预占---用例添加成功
+2019-05-09 21:33:58,558 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：调用redis限额模块，未满额不调用加载方法--中间表---用例添加成功
+2019-05-09 21:33:58,602 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：规则首次调用redis时，调用加载模块---用例添加成功
+2019-05-09 21:33:58,659 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：26接口提交一笔已预占成功的贷款申请，调用加载模块，重新设置规则---用例添加成功
+2019-05-09 21:33:58,713 [HttpRunnerManager:712] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例添加成功
+2019-05-09 21:33:58,732 [HttpRunnerManager:714] [views:upload_file] [INFO]- 验证：门店综合调用51接口推送redis，接口返回正确---用例未导入因为已存在

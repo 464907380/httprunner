@@ -157,6 +157,75 @@ class TestCaseInfoManager(models.Manager):
             return self.get(id=index).name
 
 
+'''用例信息表操作'''
+class ExcelCaseInfoManager(models.Manager):
+    def insert_case(self, belong_module, **kwargs):
+        case_info = kwargs.get('test').pop('case_info')
+        if 'DubboInterface' in kwargs['test']['request']:
+            self.create(name=kwargs.get('test').get('name'), belong_project=case_info.pop('project'),
+                        belong_module=belong_module,
+                        author=case_info.pop('author'), include=case_info.pop('include'), request=kwargs,
+                        remark=case_info.pop('case_remark'),dubbo_is=1)
+        elif 'case_remark' in case_info.keys():
+            self.create(name=kwargs.get('test').get('name'), belong_project=case_info.pop('project'),belong_module=belong_module,
+                    author=case_info.pop('author'), include=case_info.pop('include'), request=kwargs,remark=case_info.pop('case_remark'))
+        else:
+            self.create(name=kwargs.get('test').get('name'), belong_project=case_info.pop('project'),
+                        belong_module=belong_module,
+                        author=case_info.pop('author'), include=case_info.pop('include'), request=kwargs)
+
+    def update_case(self, belong_module, **kwargs):
+        print(kwargs)
+        case_info = kwargs.get('test').pop('case_info')
+        obj = self.get(id=case_info.pop('test_index'))
+        obj.belong_project = case_info.pop('project')
+        obj.belong_module = belong_module
+        obj.name = kwargs.get('test').get('name')
+        obj.author = case_info.pop('author')
+        obj.include = case_info.pop('include')
+        obj.remark=case_info.pop('case_remark')
+        try:
+            if kwargs['test']['request']['DubboInterface']:
+                obj.dubbo_is=1
+        except:
+            pass
+        obj.request = kwargs
+        obj.save()
+
+    def get_case_id_InModule(self, module_id, type=1):
+        id_list,row=[],'id'
+        QuerySet=self.filter(belong_module__id=module_id).filter(type=type).values(row)
+        for index in QuerySet:
+            id_list.append(index[row])
+        return id_list
+
+    def insert_config(self, belong_module, **kwargs):
+        config_info = kwargs.get('config').pop('config_info')
+        self.create(name=kwargs.get('config').get('name'), belong_project=config_info.pop('project'),
+                    belong_module=belong_module,
+                    author=config_info.pop('author'), type=2, request=kwargs)
+
+    def update_config(self, belong_module, **kwargs):
+        config_info = kwargs.get('config').pop('config_info')
+        obj = self.get(id=config_info.pop('test_index'))
+        obj.belong_module = belong_module
+        obj.belong_project = config_info.pop('project')
+        obj.name = kwargs.get('config').get('name')
+        obj.author = config_info.pop('author')
+        obj.request = kwargs
+        obj.save()
+
+    def get_case_name(self, name, module_name, belong_project):
+        return self.filter(belong_module__id=module_name).filter(name__exact=name).filter(
+            belong_project__exact=belong_project).count()
+
+    def get_case_by_id(self, index, type=True):
+        if type:
+            return self.filter(id=index).all()
+        else:
+            return self.get(id=index).name
+
+
 '''环境变量管理'''
 
 
