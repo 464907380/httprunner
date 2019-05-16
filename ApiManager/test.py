@@ -9,4 +9,4 @@ class OperationTests(TestCase):
         """
 
 
-        self.assertIs(operation.add_config_data(False,**congif), False)
+        self.assertIs(operation.add_config_data(False,**congi), False)
