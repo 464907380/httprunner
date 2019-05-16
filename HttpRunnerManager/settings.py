@@ -152,7 +152,7 @@ SESSION_COOKIE_AGE = 300 * 60
 djcelery.setup_loader()
 CELERY_ENABLE_UTC = True
 CELERY_TIMEZONE = 'Asia/Shanghai'
-BROKER_URL = 'amqp://guest:guest@127.0.0.1:5672//' if DEBUG else 'amqp://guest:guest@127.0.0.1:5672//'
+BROKER_URL = 'amqp://guest:guest@127.0.0.1:15672//' if DEBUG else 'amqp://guest:guest@127.0.0.1:15672//'
 CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 CELERY_RESULT_BACKEND = 'djcelery.backends.database:DatabaseBackend'
 CELERY_ACCEPT_CONTENT = ['application/json']
@@ -164,8 +164,8 @@ CELERYD_CONCURRENCY = 1 if DEBUG else 10 # celery worker的并发数 也是命�
 CELERYD_MAX_TASKS_PER_CHILD = 200  # 每个worker执行了多少任务就会死掉，我建议数量可以大一些，比如200
 
 
-EMAIL_SEND_USERNAME = 'it@haiercash.com'  # 定时任务报告发送邮箱，支持163,qq,sina,企业qq邮箱等，注意需要开通smtp服务
-EMAIL_SEND_PASSWORD = '7at7NWhp@haier$'     # 邮箱密码
+EMAIL_SEND_USERNAME = '464907380@qq.com'  # 定时任务报告发送邮箱，支持163,qq,sina,企业qq邮箱等，注意需要开通smtp服务
+EMAIL_SEND_PASSWORD = 'q.464907380'     # 邮箱密码
 
 # 配置文件上传路径
 MEDIA_ROOT = os.path.join(BASE_DIR, 'upload/')

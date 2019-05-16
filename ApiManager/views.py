@@ -4,7 +4,6 @@ import logging
 import os
 import shutil
 import sys
-
 import paramiko
 import xlrd
 from django.core.checks import messages
