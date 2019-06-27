@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from ApiManager.models import UserInfo, ProjectInfo, ModuleInfo, TestCaseInfo, EnvInfo
+from ApiManager.models import UserInfo, ProjectInfo, ModuleInfo, TestCaseInfo, EnvInfo ,ExcelCase
 
 
 
@@ -46,6 +46,20 @@ class ModuleInfoAdmin(admin.ModelAdmin):
 class TestCaseInfoAdmin(admin.ModelAdmin):
     list_display = (
         'id', 'type', 'name', 'belong_project', 'belong_module', 'include', 'author', 'request',
+        'create_time',
+        'update_time')
+    list_per_page = 50
+    ordering = ('-create_time',)
+    list_display_links = ('name',)
+    list_filter = ('belong_project', 'belong_module', 'type', 'name')  # 过滤器
+    search_fields = ('belong_project', 'belong_module', 'type', 'name')  # 搜索字段
+    date_hierarchy = 'update_time'  # 详细时间分层筛选
+
+
+@admin.register(ExcelCase)
+class ExcelCaseAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'type', 'name', 'belong_project', 'belong_module', 'author',
         'create_time',
         'update_time')
     list_per_page = 50

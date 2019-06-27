@@ -42,7 +42,6 @@ def login_check(func):
         if not request.session.get('login_status'):
             return HttpResponseRedirect('/api/login/')
         return func(request, *args, **kwargs)
-
     return wrapper
 
 
@@ -245,7 +244,6 @@ def run_test(request):
         "failfast": False,
     }
     runner = HttpRunner(**kwargs)
-
     testcase_dir_path = os.path.join(os.getcwd(), "suite")
     testcase_dir_path = os.path.join(testcase_dir_path, get_time_stamp())
 

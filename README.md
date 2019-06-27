@@ -48,9 +48,9 @@ python manage.py migrate #应用到db生成数据表
 python manage.py runserver 0.0.0.0:8000
 
 8、启动worker, 如果选择同步执行并确保不会使用到定时任务，那么此步骤可忽略
-nohup python3 manage.py celery -A HttpRunnerManager worker --loglevel=info > logs/worker.log & #启动worker 
- nohup python3 manage.py celery beat --loglevel=info > logs/beat.log &#启动定时任务监听器 
- nohup celery flower > /usr/local/httprunnerm_test/logs/flower.log &#启动任务监控后台
+nohup python manage.py celery -A HttpRunnerManager worker --loglevel=info > logs/worker.log & #启动worker 
+ nohup python manage.py celery beat --loglevel=info > logs/beat.log &#启动定时任务监听器 
+ nohup celery flower > logs/flower.log &#启动任务监控后台
 
 9、访问：http://localhost:5555/dashboard 即可查看任务列表和状态
 

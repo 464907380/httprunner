@@ -942,3 +942,2611 @@ AttributeError: 'NoneType' object has no attribute 'setdefault'
 2019-05-15 16:28:43,412 [HttpRunnerManager:163] [operation:add_case_data] [INFO]- get-token用例更新成功: {'test': {'request': {'url': '/api/get-token', 'method': 'POST', 'json': {'sign': '9c0c7e51c91ae963c833a4ccbab8d683c4a90c98'}, 'headers': {'User-Agent': 'python-requests/2.18.4', 'device_sn': '$device_sn', 'os_platform': '$os_platform', 'app_version': '$app_version', 'Content-Type': 'application/json'}}, 'name': 'get-token', 'validate': [{'comparator': 'equals', 'check': 'status_code', 'expected': 200}, {'comparator': 'equals', 'check': 'headers.Content-Type', 'expected': 'application/json'}, {'comparator': 'equals', 'check': 'content.success', 'expected': True}], 'extract': [{'token': 'content.token'}]}}
 2019-05-15 16:35:19,329 [HttpRunnerManager:163] [operation:add_case_data] [INFO]- users用例更新成功: {'test': {'request': {'url': '/api/users/$user_id', 'method': 'POST', 'json': {'name': 'user1', 'password': '123456'}, 'headers': {'User-Agent': 'python-requests/2.18.4', 'device_sn': '$device_sn', 'token': '$token', 'Content-Type': 'application/json'}}, 'name': 'users', 'validate': [{'comparator': 'equals', 'check': 'status_code', 'expected': 201}, {'comparator': 'equals', 'check': 'headers.Content-Type', 'expected': 'application/json'}, {'comparator': 'equals', 'check': 'content.success', 'expected': True}, {'comparator': 'equals', 'check': 'content.msg', 'expected': 'user created successfully.'}], 'variables': [{'device_sn': 'FwgRiO7CNA50DSU'}, {'user_id': '1000'}]}}
 2019-05-15 16:59:28,225 [HttpRunnerManager:163] [operation:add_case_data] [INFO]- get-token用例更新成功: {'test': {'request': {'url': '/api/get-token', 'method': 'POST', 'json': {'sign': '${get_sign($device_sn, $os_platform, $app_version)}'}, 'headers': {'User-Agent': 'python-requests/2.18.4', 'device_sn': '$device_sn', 'os_platform': '$os_platform', 'app_version': '$app_version', 'Content-Type': 'application/json'}}, 'name': 'get-token', 'validate': [{'comparator': 'equals', 'check': 'status_code', 'expected': 200}, {'comparator': 'equals', 'check': 'headers.Content-Type', 'expected': 'application/json'}, {'comparator': 'equals', 'check': 'content.success', 'expected': True}], 'extract': [{'token': 'content.token'}]}}
+2019-05-21 15:14:11,196 [HttpRunnerManager:60] [views:login] [INFO]- pengqiang 登录成功
+2019-05-21 15:15:45,089 [HttpRunnerManager:60] [views:login] [INFO]- pengqiang 登录成功
+2019-05-21 15:16:11,500 [HttpRunnerManager:60] [views:login] [INFO]- pengqiang 登录成功
+2019-05-21 15:19:03,349 [HttpRunnerManager:60] [views:login] [INFO]- pengqiang 登录成功
+2019-05-21 15:24:43,836 [HttpRunnerManager:60] [views:login] [INFO]- pengqiang 登录成功
+2019-05-22 16:08:30,540 [HttpRunnerManager:60] [views:login] [INFO]- pengqiang 登录成功
+2019-05-22 17:58:56,412 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2019-05-22 17:58:56,463 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2019-05-22 17:59:20,647 [HttpRunnerManager:60] [views:login] [INFO]- pengqiang 登录成功
+2019-05-22 21:54:17,103 [HttpRunnerManager:60] [views:login] [INFO]- pengqiang 登录成功
+2019-05-23 10:49:13,416 [HttpRunnerManager:60] [views:login] [INFO]- pengqiang 登录成功
+2019-05-29 13:43:54,664 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2019-05-29 13:43:54,711 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2019-05-29 13:44:17,962 [HttpRunnerManager:60] [views:login] [INFO]- pengqiang 登录成功
+2019-05-30 13:50:17,710 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/ApiManager/excelcase/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 574, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 1570, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 705, in get_changelist_instance
+    self,
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 76, in __init__
+    self.queryset = self.get_queryset(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 354, in get_queryset
+    qs, search_use_distinct = self.model_admin.get_search_results(request, qs, self.query)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 957, in get_search_results
+    queryset = queryset.filter(reduce(operator.or_, or_queries))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1271, in _add_q
+    current_negated, allow_joins, split_subq)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1076, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+2019-05-30 13:50:53,524 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/ApiManager/excelcase/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 574, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 1570, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 705, in get_changelist_instance
+    self,
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 76, in __init__
+    self.queryset = self.get_queryset(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 354, in get_queryset
+    qs, search_use_distinct = self.model_admin.get_search_results(request, qs, self.query)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 957, in get_search_results
+    queryset = queryset.filter(reduce(operator.or_, or_queries))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1271, in _add_q
+    current_negated, allow_joins, split_subq)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1076, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+2019-05-30 13:51:52,235 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/ApiManager/testcaseinfo/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 574, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 1570, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 705, in get_changelist_instance
+    self,
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 76, in __init__
+    self.queryset = self.get_queryset(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 354, in get_queryset
+    qs, search_use_distinct = self.model_admin.get_search_results(request, qs, self.query)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 957, in get_search_results
+    queryset = queryset.filter(reduce(operator.or_, or_queries))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1271, in _add_q
+    current_negated, allow_joins, split_subq)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1076, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+2019-05-30 13:51:56,625 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/ApiManager/testcaseinfo/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 574, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 1570, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 705, in get_changelist_instance
+    self,
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 76, in __init__
+    self.queryset = self.get_queryset(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 354, in get_queryset
+    qs, search_use_distinct = self.model_admin.get_search_results(request, qs, self.query)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 957, in get_search_results
+    queryset = queryset.filter(reduce(operator.or_, or_queries))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1271, in _add_q
+    current_negated, allow_joins, split_subq)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1076, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+2019-05-30 14:54:52,946 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/ApiManager/excelcase/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 574, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 1570, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 705, in get_changelist_instance
+    self,
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 76, in __init__
+    self.queryset = self.get_queryset(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 354, in get_queryset
+    qs, search_use_distinct = self.model_admin.get_search_results(request, qs, self.query)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 957, in get_search_results
+    queryset = queryset.filter(reduce(operator.or_, or_queries))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1271, in _add_q
+    current_negated, allow_joins, split_subq)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1076, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+2019-05-30 14:55:18,553 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/ApiManager/excelcase/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 574, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 1570, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 705, in get_changelist_instance
+    self,
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 76, in __init__
+    self.queryset = self.get_queryset(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 354, in get_queryset
+    qs, search_use_distinct = self.model_admin.get_search_results(request, qs, self.query)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 957, in get_search_results
+    queryset = queryset.filter(reduce(operator.or_, or_queries))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1271, in _add_q
+    current_negated, allow_joins, split_subq)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1076, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+2019-05-30 14:55:27,706 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/ApiManager/excelcase/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 574, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 1570, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 705, in get_changelist_instance
+    self,
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 76, in __init__
+    self.queryset = self.get_queryset(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\views\main.py", line 354, in get_queryset
+    qs, search_use_distinct = self.model_admin.get_search_results(request, qs, self.query)
+  File "D:\Program Files\Python36\lib\site-packages\django\contrib\admin\options.py", line 957, in get_search_results
+    queryset = queryset.filter(reduce(operator.or_, or_queries))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1271, in _add_q
+    current_negated, allow_joins, split_subq)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1076, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+2019-06-06 10:55:12,712 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 20, in <module>
+    from ApiManager.tasks import main_hrun
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\tasks.py", line 16, in <module>
+    from httprunner import HttpRunner, logger
+ImportError: cannot import name 'HttpRunner'
+2019-06-06 11:03:41,296 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 20, in <module>
+    from ApiManager.tasks import main_hrun
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\tasks.py", line 16, in <module>
+    from httprunner import HttpRunner, logger
+ImportError: cannot import name 'HttpRunner'
+2019-06-06 11:06:25,793 [HttpRunnerManager:60] [views:login] [INFO]- pengqiang 登录成功
+2019-06-06 11:07:38,713 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 247, in run_test
+    runner = httprunner(**kwargs)
+TypeError: 'module' object is not callable
+2019-06-06 11:19:08,888 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 247, in run_test
+TypeError: 'module' object is not callable
+2019-06-06 11:20:08,904 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 247, in run_test
+TypeError: 'module' object is not callable
+2019-06-06 11:20:23,496 [HttpRunnerManager:60] [views:login] [INFO]- pengqiang 登录成功
+2019-06-06 11:20:31,415 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 247, in run_test
+TypeError: 'module' object is not callable
+2019-06-06 11:21:10,631 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 247, in run_test
+TypeError: 'module' object is not callable
+2019-06-06 11:21:17,970 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 247, in run_test
+TypeError: 'module' object is not callable
+2019-06-06 11:22:02,351 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 247, in run_test
+    testcase_dir_path = os.path.join(os.getcwd(), "suite")
+TypeError: 'module' object is not callable
+2019-06-06 11:25:03,579 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+    return wrapper
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 247, in run_test
+    testcase_dir_path = os.path.join(testcase_dir_path, get_time_stamp())
+TypeError: 'module' object is not callable
+2019-06-06 11:27:30,587 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+    return wrapper
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 247, in run_test
+    testcase_dir_path = os.path.join(testcase_dir_path, get_time_stamp())
+TypeError: 'module' object is not callable
+2019-06-06 13:02:21,054 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+    return wrapper
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 247, in run_test
+    testcase_dir_path = os.path.join(testcase_dir_path, get_time_stamp())
+TypeError: 'module' object is not callable
+2019-06-24 16:17:20,529 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2019-06-24 16:17:44,484 [HttpRunnerManager:58] [views:login] [INFO]- pengqiang 登录成功
+2019-06-24 16:19:51,405 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+    return self.run_path(path_or_tests, dot_env_path, mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+    return self.run_tests(tests_mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+    parsed_testcases = parser.parse_tests(tests_mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+    parsed_testcase = _parse_testcase(testcase, project_mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+    session_variables_set
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+    for _validator in ref_raw_validators
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+    for _validator in ref_raw_validators
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+    raise exceptions.ParamsError("invalid validator: {}".format(validator))
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+2019-06-24 16:19:51,420 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+    return self.run_path(path_or_tests, dot_env_path, mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+    return self.run_tests(tests_mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+    parsed_testcases = parser.parse_tests(tests_mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+    parsed_testcase = _parse_testcase(testcase, project_mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+    session_variables_set
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+    for _validator in ref_raw_validators
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+    for _validator in ref_raw_validators
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+    raise exceptions.ParamsError("invalid validator: {}".format(validator))
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+2019-06-24 16:21:01,398 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+    return self.run_path(path_or_tests, dot_env_path, mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+    return self.run_tests(tests_mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+    parsed_testcases = parser.parse_tests(tests_mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+    parsed_testcase = _parse_testcase(testcase, project_mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+    session_variables_set
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+    for _validator in ref_raw_validators
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+    for _validator in ref_raw_validators
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+    raise exceptions.ParamsError("invalid validator: {}".format(validator))
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+2019-06-24 16:22:21,588 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+    return self.run_path(path_or_tests, dot_env_path, mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+    return self.run_tests(tests_mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+    parsed_testcases = parser.parse_tests(tests_mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+    parsed_testcase = _parse_testcase(testcase, project_mapping)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+    session_variables_set
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+    for _validator in ref_raw_validators
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+    for _validator in ref_raw_validators
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+    raise exceptions.ParamsError("invalid validator: {}".format(validator))
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+2019-06-24 16:47:12,507 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+2019-06-24 16:47:12,543 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2019-06-24 16:47:12,602 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2019-06-24 16:47:12,641 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2019-06-24 16:47:12,682 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2019-06-24 16:47:12,723 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2019-06-24 16:47:12,768 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2019-06-24 16:47:26,496 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+2019-06-24 16:47:26,528 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2019-06-24 16:47:26,561 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2019-06-24 16:47:26,594 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2019-06-24 16:47:26,630 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2019-06-24 16:47:26,667 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2019-06-24 16:47:26,705 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 43, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 264, in run_test
+    runner.run(testcase_dir_path)
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 264, in run
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 252, in run_path
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\api.py", line 171, in run_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1250, in parse_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 1039, in _parse_testcase
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in __prepare_testcase_tests
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\parser.py", line 946, in <listcomp>
+  File "D:\Program Files\Python36\lib\site-packages\httprunner\validator.py", line 217, in uniform_validator
+httprunner.exceptions.ParamsError: invalid validator: {'check': 'status_code', 'comparator': 'equals', 'expected': 200}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\utils\deprecation.py", line 95, in __call__
+    response = self.get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 37, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 87, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 122, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 94, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 333, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 264, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 422, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "D:\Program Files\Python36\lib\site-packages\django\views\debug.py", line 383, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2019-06-24 16:47:57,756 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2019-06-24 16:47:57,772 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2019-06-24 16:48:16,385 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 31, in <module>
+    from httprunner.api import HttpRunner
+ModuleNotFoundError: No module named 'httprunner.api'
+2019-06-24 17:34:18,322 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 475, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 269, in run_test
+    return render_to_response('report_template.html', runner.summary)
+  File "D:\Program Files\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 477, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 539, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 15: 'static'. Did you forget to register or load this tag?
+2019-06-24 17:37:40,722 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 475, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 269, in run_test
+    return render_to_response('report_template.html', runner.summary)
+  File "D:\Program Files\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 477, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 539, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 15: 'static'. Did you forget to register or load this tag?
+2019-06-24 17:45:31,616 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 475, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 269, in run_test
+    return render_to_response('report_template.html', runner.summary)
+  File "D:\Program Files\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 477, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 539, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 15: 'static'. Did you forget to register or load this tag?
+2019-06-24 17:47:40,228 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 475, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 269, in run_test
+    return render_to_response('report_template.html', runner.summary)
+  File "D:\Program Files\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 477, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Program Files\Python36\lib\site-packages\django\template\base.py", line 539, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 15: 'static'. Did you forget to register or load this tag?
+2019-06-27 09:23:04,029 [HttpRunnerManager:59] [views:login] [INFO]- pengqiang 登录成功
+2019-06-27 09:24:07,958 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\kombu\utils\__init__.py", line 423, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 449, in _ensured
+    return fun(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 177, in _publish
+    channel = self.channel
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 194, in _get_channel
+    channel = self._channel = channel()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\utils\__init__.py", line 425, in __call__
+    value = self.__value__ = self.__contract__()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 209, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 771, in default_channel
+    self.connection
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 756, in connection
+    self._connection = self._establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 711, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\transport\pyamqp.py", line 116, in establish_connection
+    conn = self.Connection(**opts)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 171, in __init__
+    (10, 10),  # start
+  File "D:\Program Files\Python36\lib\site-packages\amqp\abstract_channel.py", line 67, in wait
+    self.channel_id, allowed_methods, timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 241, in _wait_method
+    channel, method_sig, args, content = read_timeout(timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 330, in read_timeout
+    return self.method_reader.read_method()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 189, in read_method
+    raise m
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 107, in _next_method
+    frame_type, channel, payload = read_frame()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 154, in read_frame
+    frame_header = read(7, True)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 283, in _read
+    raise IOError('Socket closed')
+OSError: Socket closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 257, in run_test
+    main_hrun.delay(testcase_dir_path, report_name)
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\task.py", line 461, in delay
+    return self.apply_async(args, kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\task.py", line 573, in apply_async
+    **dict(self._get_exec_options(), **options)
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\base.py", line 354, in send_task
+    reply_to=reply_to or self.oid, **options
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\amqp.py", line 310, in publish_task
+    **kwargs
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 172, in publish
+    routing_key, mandatory, immediate, exchange, declare)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 470, in _ensured
+    interval_max)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 382, in ensure_connection
+    interval_start, interval_step, interval_max, callback)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\utils\__init__.py", line 246, in retry_over_time
+    return fun(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 250, in connect
+    return self.connection
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 756, in connection
+    self._connection = self._establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 711, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\transport\pyamqp.py", line 116, in establish_connection
+    conn = self.Connection(**opts)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 171, in __init__
+    (10, 10),  # start
+  File "D:\Program Files\Python36\lib\site-packages\amqp\abstract_channel.py", line 67, in wait
+    self.channel_id, allowed_methods, timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 241, in _wait_method
+    channel, method_sig, args, content = read_timeout(timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 330, in read_timeout
+    return self.method_reader.read_method()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 189, in read_method
+    raise m
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 107, in _next_method
+    frame_type, channel, payload = read_frame()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 154, in read_frame
+    frame_header = read(7, True)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 283, in _read
+    raise IOError('Socket closed')
+OSError: Socket closed
+2019-06-27 09:33:58,910 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\kombu\utils\__init__.py", line 423, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 449, in _ensured
+    return fun(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 177, in _publish
+    channel = self.channel
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 194, in _get_channel
+    channel = self._channel = channel()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\utils\__init__.py", line 425, in __call__
+    value = self.__value__ = self.__contract__()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 209, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 771, in default_channel
+    self.connection
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 756, in connection
+    self._connection = self._establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 711, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\transport\pyamqp.py", line 116, in establish_connection
+    conn = self.Connection(**opts)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 171, in __init__
+    (10, 10),  # start
+  File "D:\Program Files\Python36\lib\site-packages\amqp\abstract_channel.py", line 67, in wait
+    self.channel_id, allowed_methods, timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 241, in _wait_method
+    channel, method_sig, args, content = read_timeout(timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 330, in read_timeout
+    return self.method_reader.read_method()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 189, in read_method
+    raise m
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 107, in _next_method
+    frame_type, channel, payload = read_frame()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 154, in read_frame
+    frame_header = read(7, True)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 283, in _read
+    raise IOError('Socket closed')
+OSError: Socket closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 257, in run_test
+    main_hrun.delay(testcase_dir_path, report_name)
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\task.py", line 461, in delay
+    return self.apply_async(args, kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\task.py", line 573, in apply_async
+    **dict(self._get_exec_options(), **options)
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\base.py", line 354, in send_task
+    reply_to=reply_to or self.oid, **options
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\amqp.py", line 310, in publish_task
+    **kwargs
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 172, in publish
+    routing_key, mandatory, immediate, exchange, declare)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 470, in _ensured
+    interval_max)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 382, in ensure_connection
+    interval_start, interval_step, interval_max, callback)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\utils\__init__.py", line 246, in retry_over_time
+    return fun(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 250, in connect
+    return self.connection
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 756, in connection
+    self._connection = self._establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 711, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\transport\pyamqp.py", line 116, in establish_connection
+    conn = self.Connection(**opts)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 171, in __init__
+    (10, 10),  # start
+  File "D:\Program Files\Python36\lib\site-packages\amqp\abstract_channel.py", line 67, in wait
+    self.channel_id, allowed_methods, timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 241, in _wait_method
+    channel, method_sig, args, content = read_timeout(timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 330, in read_timeout
+    return self.method_reader.read_method()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 189, in read_method
+    raise m
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 107, in _next_method
+    frame_type, channel, payload = read_frame()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 154, in read_frame
+    frame_header = read(7, True)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 283, in _read
+    raise IOError('Socket closed')
+OSError: Socket closed
+2019-06-27 09:41:09,082 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\kombu\utils\__init__.py", line 423, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 449, in _ensured
+    return fun(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 177, in _publish
+    channel = self.channel
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 194, in _get_channel
+    channel = self._channel = channel()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\utils\__init__.py", line 425, in __call__
+    value = self.__value__ = self.__contract__()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 209, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 771, in default_channel
+    self.connection
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 756, in connection
+    self._connection = self._establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 711, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\transport\pyamqp.py", line 116, in establish_connection
+    conn = self.Connection(**opts)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 171, in __init__
+    (10, 10),  # start
+  File "D:\Program Files\Python36\lib\site-packages\amqp\abstract_channel.py", line 67, in wait
+    self.channel_id, allowed_methods, timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 241, in _wait_method
+    channel, method_sig, args, content = read_timeout(timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 330, in read_timeout
+    return self.method_reader.read_method()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 189, in read_method
+    raise m
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 107, in _next_method
+    frame_type, channel, payload = read_frame()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 154, in read_frame
+    frame_header = read(7, True)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 283, in _read
+    raise IOError('Socket closed')
+OSError: Socket closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 257, in run_test
+    main_hrun.delay(testcase_dir_path, report_name)
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\task.py", line 461, in delay
+    return self.apply_async(args, kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\task.py", line 573, in apply_async
+    **dict(self._get_exec_options(), **options)
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\base.py", line 354, in send_task
+    reply_to=reply_to or self.oid, **options
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\amqp.py", line 310, in publish_task
+    **kwargs
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 172, in publish
+    routing_key, mandatory, immediate, exchange, declare)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 470, in _ensured
+    interval_max)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 382, in ensure_connection
+    interval_start, interval_step, interval_max, callback)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\utils\__init__.py", line 246, in retry_over_time
+    return fun(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 250, in connect
+    return self.connection
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 756, in connection
+    self._connection = self._establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 711, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\transport\pyamqp.py", line 116, in establish_connection
+    conn = self.Connection(**opts)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 171, in __init__
+    (10, 10),  # start
+  File "D:\Program Files\Python36\lib\site-packages\amqp\abstract_channel.py", line 67, in wait
+    self.channel_id, allowed_methods, timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 241, in _wait_method
+    channel, method_sig, args, content = read_timeout(timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 330, in read_timeout
+    return self.method_reader.read_method()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 189, in read_method
+    raise m
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 107, in _next_method
+    frame_type, channel, payload = read_frame()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 154, in read_frame
+    frame_header = read(7, True)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 283, in _read
+    raise IOError('Socket closed')
+OSError: Socket closed
+2019-06-27 09:57:27,349 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\kombu\utils\__init__.py", line 423, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 449, in _ensured
+    return fun(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 177, in _publish
+    channel = self.channel
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 194, in _get_channel
+    channel = self._channel = channel()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\utils\__init__.py", line 425, in __call__
+    value = self.__value__ = self.__contract__()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 209, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 771, in default_channel
+    self.connection
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 756, in connection
+    self._connection = self._establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 711, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\transport\pyamqp.py", line 116, in establish_connection
+    conn = self.Connection(**opts)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 171, in __init__
+    (10, 10),  # start
+  File "D:\Program Files\Python36\lib\site-packages\amqp\abstract_channel.py", line 67, in wait
+    self.channel_id, allowed_methods, timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 241, in _wait_method
+    channel, method_sig, args, content = read_timeout(timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 330, in read_timeout
+    return self.method_reader.read_method()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 189, in read_method
+    raise m
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 107, in _next_method
+    frame_type, channel, payload = read_frame()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 154, in read_frame
+    frame_header = read(7, True)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 283, in _read
+    raise IOError('Socket closed')
+OSError: Socket closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 44, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:\Users\pq\PycharmProjects\hrm-test-dev\ApiManager\views.py", line 257, in run_test
+    main_hrun.delay(testcase_dir_path, report_name)
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\task.py", line 461, in delay
+    return self.apply_async(args, kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\task.py", line 573, in apply_async
+    **dict(self._get_exec_options(), **options)
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\base.py", line 354, in send_task
+    reply_to=reply_to or self.oid, **options
+  File "D:\Program Files\Python36\lib\site-packages\celery\app\amqp.py", line 310, in publish_task
+    **kwargs
+  File "D:\Program Files\Python36\lib\site-packages\kombu\messaging.py", line 172, in publish
+    routing_key, mandatory, immediate, exchange, declare)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 470, in _ensured
+    interval_max)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 382, in ensure_connection
+    interval_start, interval_step, interval_max, callback)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\utils\__init__.py", line 246, in retry_over_time
+    return fun(*args, **kwargs)
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 250, in connect
+    return self.connection
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 756, in connection
+    self._connection = self._establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\connection.py", line 711, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "D:\Program Files\Python36\lib\site-packages\kombu\transport\pyamqp.py", line 116, in establish_connection
+    conn = self.Connection(**opts)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 171, in __init__
+    (10, 10),  # start
+  File "D:\Program Files\Python36\lib\site-packages\amqp\abstract_channel.py", line 67, in wait
+    self.channel_id, allowed_methods, timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 241, in _wait_method
+    channel, method_sig, args, content = read_timeout(timeout)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\connection.py", line 330, in read_timeout
+    return self.method_reader.read_method()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 189, in read_method
+    raise m
+  File "D:\Program Files\Python36\lib\site-packages\amqp\method_framing.py", line 107, in _next_method
+    frame_type, channel, payload = read_frame()
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 154, in read_frame
+    frame_header = read(7, True)
+  File "D:\Program Files\Python36\lib\site-packages\amqp\transport.py", line 283, in _read
+    raise IOError('Socket closed')
+OSError: Socket closed

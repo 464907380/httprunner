@@ -78,7 +78,7 @@
                 <thead>
                 <tr class="am-success">
                     <th class="table-check"><input type="checkbox" id="select_all"/></th>
-                    <th class="table-title">序号</th>
+                    <th nowrap="nowrap" class="table-title">序号</th>
                     <th class="table-type">名称</th>
                     <th class="table-type">所属项目</th>
                     <th class="table-type">所属模块</th>
@@ -155,7 +155,7 @@
                         <td>{{ foo.author }}</td>
 {#                        <td>{{ foo.create_time }}</td>#}
                         <td>{{ foo.update_time }}</td>
-                        <td>{{ foo.operating_steps }}</td>
+                        <td id="testdiv"><pre>{{ foo.operating_steps }}</pre></td>
                         <td>{{ foo.result }}</td>
 
 {#                        <td>{{ foo.expect }}</td>#}
