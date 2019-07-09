@@ -1,9 +1,12 @@
 # coding: utf-8
+from __future__ import absolute_import, unicode_literals
 import json
 import logging
 import os
 import shutil
 import sys
+import urllib.parse
+
 import paramiko
 import xlrd
 from django.core.checks import messages
@@ -23,7 +26,7 @@ from ApiManager.utils.common import module_info_logic, project_info_logic, case_
     init_filter_session, get_total_values, timestamp_to_datetime
 from ApiManager.utils.operation import env_data_logic, del_module_data, del_project_data, del_test_data, copy_test_data, \
     del_report_data, add_suite_data, copy_suite_data, del_suite_data, edit_suite_data, add_test_reports, \
-    get_cases_by_module, get_casesNum_by_user, del_excel_test_data
+    get_cases_by_module, get_casesNum_by_user, del_excel_test_data, update_excel_test_result_data
 from ApiManager.utils.pagination import get_pager_info,add_cases
 from ApiManager.utils.runner import run_by_batch, run_test_by_type
 from ApiManager.utils.task_opt import delete_task, change_task_status
@@ -926,6 +929,15 @@ def excel_bat_del(request):
         del_excel_test_data(id)
     return HttpResponseRedirect('/api/excel_test_list/1/')
 
+@login_check
+def excel_bat_change(request):
+    #批量excel用例
+    test_list=request.body.decode('utf-8').split('&')
+    result=urllib.parse.unquote(test_list[-1].split('=')[1])
+    for index in test_list[0:-1]:
+        id=index.split('=')[1]
+        update_excel_test_result_data(id,result)
+    return HttpResponseRedirect('/api/excel_test_list/1/')
 
 @login_check
 def add_case_dubbo(request):
