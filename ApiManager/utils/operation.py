@@ -366,6 +366,21 @@ def del_excel_test_data(id):
     logging.info('用例/配置已删除')
     return 'ok'
 
+def update_excel_test_result_data(id,val):
+    """
+    根据用例索引和值更新数据
+    :param id: str or int: test or config index
+    :return: ok or tips
+    """
+    try:
+        excel_obj = ExcelCase.objects.get(id=id)
+        excel_obj.result = val
+        excel_obj.save()
+    except ObjectDoesNotExist:
+        return '更新异常，请重试'
+    logging.info('用例/配置已更新')
+    return 'ok'
+
 
 def del_suite_data(id):
     """

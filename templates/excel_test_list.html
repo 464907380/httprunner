@@ -22,7 +22,9 @@
                 <button type="button" class="am-btn am-btn-group am-round am-btn-xs am-icon-minus"
                         onclick="my_delete()">批量删除
                 </button>
-
+                <button type="button" class="am-btn am-btn-warning am-round am-btn-xs am-icon-plus"
+                        onclick="my_change()">批量修改执行结果
+                </button>
             </dl>
         </div>
 
@@ -197,6 +199,24 @@
         </div>
     </div>
 
+    <div class="am-modal am-modal-confirm" tabindex="-1" id="bat_change">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">
+                <select class="am-input-zm am-input-xm" id="select_change">
+                    <option value ="通过">通过</option>
+                    <option value ="不通过">不通过</option>
+                    <option value="阻塞">阻塞</option>
+                    <option value="暂不可用">暂不可用</option>
+                    <option value="不存在该场景">不存在该场景</option>
+                </select>
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+                <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+            </div>
+        </div>
+    </div>
+
     <script type="text/javascript">
 
         function coolspo(id) {
@@ -242,6 +262,26 @@
                             var json2map = JSON.stringify(data);
                             var obj = JSON.parse(json2map);
                             post('/api/excel_bat_del/', obj)
+                        },
+                        onCancel: function () {
+                        }
+                    }
+                );
+            }
+        }
+
+        function my_change() {
+            if ($("input:checked").size() == 0) {
+                myAlert("请至少选择一条用例！");
+            } else {
+                $('#bat_change').modal({
+                        relatedTarget: this,
+                        onConfirm: function () {
+                            var data = $("#test_list").serializeJSON();
+                            var json2map = JSON.stringify(data);
+                            var obj = JSON.parse(json2map);
+                            obj['result_val'] = $('#select_change').val();
+                            post('/api/excel_bat_change/', obj)
                         },
                         onCancel: function () {
                         }
