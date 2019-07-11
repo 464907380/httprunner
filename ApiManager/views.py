@@ -253,18 +253,25 @@ def run_test(request):
     if request.is_ajax():
         kwargs = json.loads(request.body.decode('utf-8'))
         id = kwargs.pop('id')
-        base_url = kwargs.pop('env_name')
+        env_info = request.POST.get('env_name')
+        base_url = env_info.split('&')[0]
+        env_var = env_info.split('&')[1]
         type = kwargs.pop('type')
-        run_test_by_type(id, base_url, testcase_dir_path, type)
+        run_test_by_type(id, base_url, testcase_dir_path, type, env_var)
         report_name = kwargs.get('report_name', None)
         main_hrun.delay(testcase_dir_path, report_name)
         return HttpResponse('用例执行中，请稍后查看报告即可,默认时间戳命名报告')
     else:
         id = request.POST.get('id')
-        base_url = request.POST.get('env_name')
+        env_info = request.POST.get('env_name')
+        if env_info != '':
+            base_url = env_info.split('&')[0]
+            env_var = env_info.split('&')[1]
+        else:
+            base_url = ''
+            env_var = ''
         type = request.POST.get('type', 'test')
-
-        run_test_by_type(id, base_url, testcase_dir_path, type)
+        run_test_by_type(id, base_url, testcase_dir_path, type, env_var)
         runner.run(testcase_dir_path)
         shutil.rmtree(testcase_dir_path)
         runner.summary = timestamp_to_datetime(runner.summary, type=False)
@@ -291,20 +298,24 @@ def run_batch_test(request):
     if request.is_ajax():
         kwargs = json.loads(request.body.decode('utf-8'))
         test_list = kwargs.pop('id')
-        base_url = kwargs.pop('env_name')
+        env_info = request.POST.get('env_name')
+        base_url = env_info.split('&')[0]
+        env_var = env_info.split('&')[1]
         type = kwargs.pop('type')
         report_name = kwargs.get('report_name', None)
-        run_by_batch(test_list, base_url, testcase_dir_path, type=type)
+        run_by_batch(test_list, base_url, env_var, testcase_dir_path, type=type)
         main_hrun.delay(testcase_dir_path, report_name)
         return HttpResponse('用例执行中，请稍后查看报告即可,默认时间戳命名报告')
     else:
         type = request.POST.get('type', None)
-        base_url = request.POST.get('env_name')
+        env_info = request.POST.get('env_name')
+        base_url = env_info.split('&')[0]
+        env_var = env_info.split('&')[1]
         test_list = request.body.decode('utf-8').split('&')
         if type:
-            run_by_batch(test_list, base_url, testcase_dir_path, type=type, mode=True)
+            run_by_batch(test_list, base_url, env_var, testcase_dir_path, type=type, mode=True)
         else:
-            run_by_batch(test_list, base_url, testcase_dir_path)
+            run_by_batch(test_list, base_url, env_var, testcase_dir_path)
 
         runner.run(testcase_dir_path)
 

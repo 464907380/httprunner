@@ -237,6 +237,7 @@ class EnvInfoManager(models.Manager):
         obj = self.get(id=index)
         obj.env_name = kwargs.pop('env_name')
         obj.base_url = kwargs.pop('base_url')
+        obj.env_var = kwargs.pop('env_var')
         obj.simple_desc = kwargs.pop('simple_desc')
         obj.save()
 

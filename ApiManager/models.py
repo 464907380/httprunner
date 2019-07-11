@@ -105,6 +105,7 @@ class EnvInfo(BaseTable):
 
     env_name = models.CharField(max_length=40, null=False, unique=True)
     base_url = models.CharField(max_length=40, null=False)
+    env_var = models.CharField(max_length=1024)
     simple_desc = models.CharField(max_length=50, null=False)
     objects = EnvInfoManager()
 

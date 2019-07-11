@@ -59,7 +59,8 @@
                         <select class="form-control" id="env_name" name="env_name">
                             <option value="">自带环境</option>
                             {% for foo in env %}
-                                <option value="{{ foo.base_url }}">{{ foo.env_name }}</option>
+                                <option value="{{ foo.base_url }}&{{ foo.env_var }}">{{ foo.env_name }}</option>
+{#                                <option value="{{ foo.base_url }}">{{ foo.env_name }}</option>#}
                             {% endfor %}
                         </select>
                     </div>

@@ -69,7 +69,7 @@ def project_hrun(name, base_url, project, receiver):
 
 
 @shared_task
-def module_hrun(name, base_url, module, receiver):
+def module_hrun(name, base_url, env_var, module, receiver):
     """
     异步运行模块
     :param env_name: str: 环境地址
@@ -89,7 +89,7 @@ def module_hrun(name, base_url, module, receiver):
 
     try:
         for value in module:
-            run_by_module(value[0], base_url, testcase_dir_path)
+            run_by_module(value[0], base_url, testcase_dir_path, env_var)
     except ObjectDoesNotExist:
         return '找不到模块信息'
 

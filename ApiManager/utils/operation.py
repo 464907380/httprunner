@@ -248,7 +248,7 @@ def edit_suite_data(**kwargs):
 def env_data_logic(**kwargs):
     """
     环境信息逻辑判断及落地
-    :param kwargs: dict
+    :param kwargs: 包含一条环境信息的dict
     :return: ok or tips
     """
     id = kwargs.get('id', None)

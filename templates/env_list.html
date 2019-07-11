@@ -33,6 +33,15 @@
                     </div>
 
                     <div class="form-group">
+                        <label class="control-label col-sm-3" for="env_var"
+                               style="font-weight: inherit; font-size: small ">env_var：</label>
+                        <div class="col-sm-9">
+                            <input name="env_var" type="text" class="form-control" id="env_var"
+                                   placeholder="env_var0,env_var1,env_var2......" value="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label class="control-label col-sm-3" for="simple_desc"
                                style="font-weight: inherit; font-size: small ">简要描述：</label>
                         <div class="col-sm-9">
@@ -92,7 +101,7 @@
                         <td><input type="checkbox" name="env_{{ foo.id }}" value="{{ foo.id }}"/></td>
                         <td>{{ forloop.counter }}</td>
                         <td><a href="#"
-                               onclick="edit('{{ foo.id }}', '{{ foo.env_name }}', '{{ foo.base_url }}', '{{ foo.simple_desc }}')">{{ foo.env_name }}</a>
+                               onclick="edit('{{ foo.id }}', '{{ foo.env_name }}', '{{ foo.base_url }}','{{ foo.env_var }}', '{{ foo.simple_desc }}')">{{ foo.env_name }}</a>
                         </td>
                         <td>{{ foo.base_url }}</td>
                         <td>{{ foo.simple_desc }}</td>
@@ -103,7 +112,7 @@
                                     <button type="button"
                                             class="am-btn am-btn-default am-btn-xs am-text-secondary am-round"
                                             data-am-popover="{content: '编辑', trigger: 'hover focus'}"
-                                            onclick="edit('{{ foo.id }}', '{{ foo.env_name }}', '{{ foo.base_url }}', '{{ foo.simple_desc }}')"> <span
+                                            onclick="edit('{{ foo.id }}', '{{ foo.env_name }}', '{{ foo.base_url }}','{{ foo.env_var }}', '{{ foo.simple_desc }}')"> <span
                                             class="am-icon-pencil-square-o"></span></button>
                                     <button type="button"
                                             class="am-btn am-btn-default am-btn-xs am-text-danger am-round"
@@ -136,10 +145,11 @@
             });
         });
 
-        function edit(id, env_name, base_url, simple_desc) {
+        function edit(id, env_name, base_url, env_var, simple_desc) {
             $('#mode').val(id);
             $('#env_name').val(env_name);
             $('#base_url').val(base_url);
+            $('#env_var').val(env_var);
             $('#simple_desc').val(simple_desc);
             $('#add_env_model').modal({
                 relatedTarget: this,

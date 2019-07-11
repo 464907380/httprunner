@@ -6,7 +6,7 @@ from ApiManager.models import TestCaseInfo, ModuleInfo, ProjectInfo, DebugTalk, 
 from ApiManager.utils.testcase import dump_python_file, dump_yaml_file
 
 
-def run_by_single(index, base_url, path):
+def run_by_single(index, base_url, path, env_var):
     """
     加载单个case用例信息
     :param index: int or str：用例索引
@@ -17,10 +17,19 @@ def run_by_single(index, base_url, path):
         'config': {
             'name': '',
             'request': {
-                'base_url': base_url
-            }
+                'base_url': base_url,
+            },
+            "variables": [
+            ]
         }
     }
+
+    env_var_count = len(env_var.split(','))
+    for i in range(env_var_count):
+        str1 = "{'env_var" + str(i) + "':'" + env_var.split(',')[i - 1] + "'}"
+        str2 = eval(str1)
+        config['config']['variables'].append(str2)
+
     testcase_list = []
 
     testcase_list.append(config)
@@ -62,6 +71,8 @@ def run_by_single(index, base_url, path):
                 config_request = eval(TestCaseInfo.objects.get(id=config_id).request)
                 config_request.get('config').get('request').setdefault('base_url', base_url)
                 config_request['config']['name'] = name
+                for i in range(len(config['config']['variables'])):
+                    config_request['config']['variables'].append(config['config']['variables'][i-1])
                 testcase_list[0] = config_request
             else:
                 id = test_info[0]
@@ -77,17 +88,17 @@ def run_by_single(index, base_url, path):
     dump_yaml_file(os.path.join(testcase_dir_path, name + '.yml'), testcase_list)
 
 
-def run_by_suite(index, base_url, path):
+def run_by_suite(index, base_url, path, env_var):
     obj = TestSuite.objects.get(id=index)
 
     include = eval(obj.include)
 
     for val in include:
-        run_by_single(val[0], base_url, path)
+        run_by_single(val[0], base_url, path, env_var)
 
 
 
-def run_by_batch(test_list, base_url, path, type=None, mode=False):
+def run_by_batch(test_list, base_url, env_var, path, type=None, mode=False):
     """
     批量组装用例数据
     :param test_list:
@@ -102,34 +113,34 @@ def run_by_batch(test_list, base_url, path, type=None, mode=False):
             form_test = test_list[index].split('=')
             value = form_test[1]
             if type == 'project':
-                run_by_project(value, base_url, path)
+                run_by_project(value, base_url, path, env_var)
             elif type == 'module':
-                run_by_module(value, base_url, path)
+                run_by_module(value, base_url, path, env_var)
             elif type == 'suite':
-                run_by_suite(value, base_url, path)
+                run_by_suite(value, base_url, path, env_var)
             else:
-                run_by_single(value, base_url, path)
+                run_by_single(value, base_url, path, env_var)
 
     else:
         if type == 'project':
             for value in test_list.values():
-                run_by_project(value, base_url, path)
+                run_by_project(value, base_url, path, env_var)
 
         elif type == 'module':
             for value in test_list.values():
-                run_by_module(value, base_url, path)
+                run_by_module(value, base_url, path, env_var)
         elif type == 'suite':
             for value in test_list.values():
-                run_by_suite(value, base_url, path)
+                run_by_suite(value, base_url, path, env_var)
 
         else:
             for index in range(len(test_list) - 1):
                 form_test = test_list[index].split('=')
                 index = form_test[1]
-                run_by_single(index, base_url, path)
+                run_by_single(index, base_url, path, env_var)
 
 
-def run_by_module(id, base_url, path):
+def run_by_module(id, base_url, path, env_var):
     """
     组装模块用例
     :param id: int or str：模块索引
@@ -139,10 +150,10 @@ def run_by_module(id, base_url, path):
     obj = ModuleInfo.objects.get(id=id)
     test_index_list = TestCaseInfo.objects.filter(belong_module=obj, type=1).values_list('id')
     for index in test_index_list:
-        run_by_single(index[0], base_url, path)
+        run_by_single(index[0], base_url, path, env_var)
 
 
-def run_by_project(id, base_url, path):
+def run_by_project(id, base_url, path, env_var):
     """
     组装项目用例
     :param id: int or str：项目索引
@@ -153,15 +164,15 @@ def run_by_project(id, base_url, path):
     module_index_list = ModuleInfo.objects.filter(belong_project=obj).values_list('id')
     for index in module_index_list:
         module_id = index[0]
-        run_by_module(module_id, base_url, path)
+        run_by_module(module_id, base_url, path, env_var)
 
 
-def run_test_by_type(id, base_url, path, type):
+def run_test_by_type(id, base_url, path, type, env_var):
     if type == 'project':
-        run_by_project(id, base_url, path)
+        run_by_project(id, base_url, path, env_var)
     elif type == 'module':
-        run_by_module(id, base_url, path)
+        run_by_module(id, base_url, path, env_var)
     elif type == 'suite':
-        run_by_suite(id, base_url, path)
+        run_by_suite(id, base_url, path, env_var)
     else:
-        run_by_single(id, base_url, path)
+        run_by_single(id, base_url, path, env_var)
